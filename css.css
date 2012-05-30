@@ -52,6 +52,7 @@ header h1, header h1 a{
     margin-left: auto;
     margin-right: auto;
     display: block;
+    text-align: center;
 }
 
 ul.features{
@@ -67,6 +68,7 @@ ul.features li{
     background: url('assets/tick.png') 0px 3px no-repeat;
 /*    padding-left: 35px;*/
     padding: 8px 0 8px 35px;
+    text-align: left;
 }
 
 #bottom_page{
