@@ -16,6 +16,7 @@
 }
 .blogbutton a {
     color: #ffffff;
+    text-decoration: none;
 }
 .blogbutton a:hover {
     color: #ffffff;
@@ -41,9 +42,49 @@ header h1, header h1 a{
 	float: left;
 }
 
+.content p {
+    font-size: 14px;
+    color: #888888;
+}
+
+.content ul {
+    margin: 16px 22px 8px 30px;
+}
+
+.content li {
+    font-size: 14px;
+}
+
 .content h3.title{
-	background: #f5f5f5;
-	padding-left: 5px;
+	background: #B7B7B7;
+	padding-left: 10px;
+	font-size: 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	
+}
+.content .title a {
+    color: #ffffff;
+}
+.blogbutton a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.content h2 {
+    font-size: 18px;
+    color: #B7B7B7;
+}
+
+.content h3 {
+    font-size: 16px;
+    color: #B7B7B7;
+}
+
+.sidebar h4 {
+    color: #B7B7B7;
+    color: #B7B7B7;
 }
 
 .centerblock{
@@ -95,17 +136,29 @@ ul.features li{
 	border-right: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-pre code{
-	background-color: transparent;
-	color: #404040;
-	padding: 0;
+.content code{
+	background-color: #6C6C6C;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 0 4px;
 }
 
-a{
-    color: #4690ff;
+a {
+    color: #444444;
+}
+a:hover {
+    color: #444444;
+    text-decoration: underline;
 }
 
 .clear { clear: both; }
+
+.featured {
+	line-height: 18px;
+	color: gray;
+	font-weight:bold;
+	font-size:1.4em;
+}
 
 /* MailChimp Form Embed Code - Slim - 08/17/2011 */
 #mc_embed_signup form {display:block; position:relative; text-align:left; padding:10px 0 10px 3%; text-align: center;}
