@@ -96,6 +96,10 @@ header h1, header h1 a{
     text-align: center;
 }
 
+.content .page-header h3 {
+	color: white;
+}
+
 ul.features{
     display: inline;
     font-size: 16px;
