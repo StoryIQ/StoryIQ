@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title>Hindsight Testing</title>
+		<description>Cross team collaboration for Requirements Discovery and Acceptance Testing</description>
+		<link>http://www.hindsightesting.com/</link>
+		
+			<item>
+				<title>A Slice of Pi with your Information Radiator</title>
+				<description>&lt;p&gt;Most of you would of heard of the Raspberry Pi - a low powered credit card sized computer released in the last few months. After a wait I managed to get my hands on one of these nifty devices and have put one of my ideas into action: a power efficient information radiator.&lt;/p&gt;
+
+&lt;p&gt;Information radiators are very useful visual tools that allow anyone at a glance to see the state of the project and receive feedback from important systems. Typically an old or spare PC is used to run a web browser rendering information to a large screen or TV displayed in the team's work area. JIRA has a handy Wallboard plugin that can turn any dashboard into a format to appear on a Information Radiator.&lt;/p&gt;
+
+&lt;p&gt;With PCs using between 60-300 watts of power they are not the most power efficient compared to the Raspberry's 2 watts. The Raspberry Pi also has other benefits.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Cost: Old machines while still capable often need new components due to age and many years of use. The cost of a Raspberry Pi is approx $25-35 per unit depending on the model. This price is often the same or cheaper than replacing a Power supply or Hard disk of a old computer.&lt;/li&gt;
+&lt;li&gt;GPIO: The Raspberry has a set of pins which can be used to interface it to electronics. This could be used to drive lamps or LEDs to draw team members attention to the information radiator when important events occur, e.g. Build Fail&lt;/li&gt;
+&lt;li&gt;Small and Quiet: The circuit board of the Raspberry could be mounted on the back of the Visual Display whereas a PC is rather large and heavy.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;Enough of the why, does the Raspberry Pi work?&lt;/h2&gt;
+
+&lt;p&gt;Spoiler alert! It does work but not out of the box.&lt;/p&gt;
+
+&lt;p&gt;My first attempt at the information radiator was using the stock Debian Squeeze distribution provided by the Raspberry Pi Foundation. This distribution comes with the lightweight Webkit (the same engine as Chrome and Safari) based browser, Midori. The version of Midori happens to be 0.2.4-3 and couldn't handle the Javascript with JIRA 5  (I haven't tested other JIRA versions).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/gallery/RaspberryPiAssembled.jpg&quot;/&gt;&lt;/p&gt;
+
+&lt;h2&gt;Hang on, Firefox and Chrome are both available on Linux.&lt;/h2&gt;
+
+&lt;p&gt;The Raspberry Pi has a ARM 11 based processor so we are limited on choice of Linux distributions and the packages which have been compiled for &quot;armtel&quot;.&lt;/p&gt;
+
+&lt;p&gt;There is a community project &lt;a href=&quot;http://www.raspbian.org/&quot;&gt;raspbian&lt;/a&gt; currently porting the more up to date Debian Whezzy distribution to the ARM processor used in the Raspberry. This saved the day because it provided a cross compiled version of Midori 0.4.3 with good javascript support.&lt;/p&gt;
+
+&lt;p&gt;Raspbian is in the early stages of development and no official images have been provided, but there are Community produce images available. I used the image produced by &lt;a href=&quot;http://www.raspbian.org/HexxehImages&quot;&gt;Hexxeh&lt;/a&gt;, version r3. Once I had written this image to my SD card, I booted the Raspberry Pi and logged in using the &quot;root&quot; user and &quot;hexxeh&quot; password.&lt;/p&gt;
+
+&lt;p&gt;The image is rather simple and we need to add a few extra packages and configurations to make it useful for our purposes.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ apt-get install ntp fake-hwclock&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ dpkg-reconfigure tzdata&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ apt-get install locales&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ dpkg-reconfigure locales&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ apt-get install console-data&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ dpkg-reconfigure console-data&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ apt-get install lxde-icon-theme&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ apt-get install midori&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;As JIRA sends a large amount of files and data over HTTP, this can flood the buffers on a swapless system like the Raspberry and lead it to run out of memory. To avoid this a little kernel tweaking needs to take place. Edit &lt;code&gt;/etc/sysctl.conf&lt;/code&gt; (Hint to Linux noobs: &lt;code&gt;nano /etc/sysctl.conf&lt;/code&gt;) and add &lt;code&gt;vm.min_free_kbytes = 8192&lt;/code&gt; as the last line. Reboot the Raspberry (&lt;code&gt;reboot&lt;/code&gt;) and then you are ready to start the GUI with &lt;code&gt;startx&lt;/code&gt; and open the Midori web browser from the Desktop menu and open JIRA with the Wallboard plugin running.&lt;/p&gt;
+
+&lt;h2&gt;Performance&lt;/h2&gt;
+
+&lt;p&gt;My wallboard configuration in JIRA had 2 dashboards setup as a slideshow with slide left animation. My dashboards contained the following Gadgets&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Greenhooper Agile Gadget (Used as a Sprint Burndown graph)&lt;/li&gt;
+&lt;li&gt;Greenhooper Rapid Board (Displays our Current sprint task in swimlanes)&lt;/li&gt;
+&lt;li&gt;Activity stream&lt;/li&gt;
+&lt;li&gt;Several JQL Filter Results&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;There is a initial wait of 30 seconds to load the wallboard slide show and the slide animation between dashboards was a little jerky. But this is be to expected on a low power device without much optimization in the compilation of the web browser and javascript engine. Both these performance issues represent no usability problems as a information radiator due to the fact its not an interactive system. These issue are likely to be reduced with optimisation of the software packages (The current focus is to get them to run) and most importantly improvements in the use of Raspberry's dedicated GPU.&lt;/p&gt;
+
+&lt;h3&gt;Notes&lt;/h3&gt;
+
+&lt;p&gt;I have tested some TV's with the Raspberry PI and the Raspian distribution and some of them have had issues with the xserver. I haven't had enough time to investigate these issues in detail but a manual configuration of the xserver should be the solution.&lt;/p&gt;
+</description>
+				<published>2012-06-01 00:00:00 +0100</published>
+				<link>http://www.hindsightesting.com/blog/2012/06/01/raspberry-pi-jira-information-raditor/</link>
+			</item>
+		
+			<item>
+				<title>Security testing with Selenium and the Zed Attack Proxy (ZAP)</title>
+				<description>&lt;p&gt;A few weeks ago I had the pleasure of speaking at the 2012 Selenium Conf in London. My presentation was on &quot;Automated Security Testing&quot; using Selenium and the Zed Attack Proxy. All the SeConf presentations have been recorded and I thought I would share my talk with you now it has been published.&lt;/p&gt;
+
+&lt;object style=&quot;height: 460px; width: 760px&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/aVFZFi_6B9g?version=3&amp;feature=player_detailpage&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;&gt;&lt;embed src=&quot;http://www.youtube.com/v/aVFZFi_6B9g?version=3&amp;feature=player_detailpage&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; allowScriptAccess=&quot;always&quot; width=&quot;760&quot; height=&quot;460&quot;&gt;&lt;/object&gt;
+
+
+&lt;h3&gt;Recreating my demo&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Install Chrome if not already installed&lt;/li&gt;
+&lt;li&gt;Start Jenkins on port 80. I used a fresh install of Jenkins with no configuration changes&lt;/li&gt;
+&lt;li&gt;Start the &lt;a href=&quot;https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project&quot;&gt;Zed Attack Proxy (ZAP)&lt;/a&gt;, no additional configuration required.&lt;/li&gt;
+&lt;li&gt;Run the JUnit test &quot;JobManagementTest&quot; in my &lt;a href=&quot;https://github.com/aparkinson/jenkins-webdriver&quot;&gt;GitHub project&lt;/a&gt;. Note: this test uses Chrome&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+				<published>2012-05-18 00:00:00 +0100</published>
+				<link>http://www.hindsightesting.com/blog/2012/05/18/automated-security-testing-selenium-zap/</link>
+			</item>
+		
+	</channel>
+</rss>
+
