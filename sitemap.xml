@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">    
+  <url>
+    <loc>http://www.hindsightesting.com/</loc>
+    <lastmod>2012-06-18T21:41:56+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.hindsightesting.com/blog/2012/06/01/raspberry-pi-jira-information-raditor//</loc>
+    <lastmod>2012-06-01T00:00:00+01:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.hindsightesting.com/blog/2012/05/18/automated-security-testing-selenium-zap//</loc>
+    <lastmod>2012-05-18T00:00:00+01:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+</urlset>
