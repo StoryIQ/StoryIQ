@@ -3,7 +3,7 @@
 	<channel>
 		<title>Hindsight Testing</title>
 		<description>Cross team collaboration for Requirements Discovery and Acceptance Testing</description>
-		<link>http://www.hindsighttesting.com/</link>
+		<link>http://www.hindsightesting.com/</link>
 		
 			<item>
 				<title>A Slice of Pi with your Information Radiator</title>
@@ -74,8 +74,8 @@
 
 &lt;p&gt;I have tested some TV's with the Raspberry PI and the Raspian distribution and some of them have had issues with the xserver. I haven't had enough time to investigate these issues in detail but a manual configuration of the xserver should be the solution.&lt;/p&gt;
 </description>
-				<published>2012-06-01 00:00:00 +0100</published>
-				<link>http://www.hindsighttesting.com/blog/2012/06/01/raspberry-pi-jira-information-raditor/</link>
+				<pubDate>2012-06-01 00:00:00 +0100</pubDate>
+				<link>http://www.hindsightesting.com/blog/2012/06/01/raspberry-pi-jira-information-raditor/</link>
 			</item>
 		
 			<item>
@@ -95,8 +95,8 @@
 &lt;/ol&gt;
 
 </description>
-				<published>2012-05-18 00:00:00 +0100</published>
-				<link>http://www.hindsighttesting.com/blog/2012/05/18/automated-security-testing-selenium-zap/</link>
+				<pubDate>2012-05-18 00:00:00 +0100</pubDate>
+				<link>http://www.hindsightesting.com/blog/2012/05/18/automated-security-testing-selenium-zap/</link>
 			</item>
 		
 	</channel>
