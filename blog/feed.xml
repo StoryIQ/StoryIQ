@@ -1,13 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
-	<channel>
-		<title>Hindsight Testing</title>
-		<description>Cross team collaboration for Requirements Discovery and Acceptance Testing</description>
-		<link>http://www.hindsighttesting.com/</link>
-		
-			<item>
-				<title>A Slice of Pi with your Information Radiator</title>
-				<description>&lt;p&gt;Most of you would of heard of the Raspberry Pi - a low powered credit card sized computer released in the last few months. After a wait I managed to get my hands on one of these nifty devices and have put one of my ideas into action: a power efficient information radiator.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Blogging with Hindsight</title>
+ <link href="http://hindsighttesting.com/blog/feed.xml" rel="self"/>
+ <link href="http://hindsighttesting.com/"/>
+ <updated>2012-07-08T18:17:36+01:00</updated>
+ <id>http://hindsighttesting.com/blog</id>
+ <author>
+   <name>Hindsight Software Ltd</name>
+   <email>mail@hindsighttesting.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>A Slice of Pi with your Information Radiator</title>
+   <link href="http://hindsighttesting.comblog/2012/06/01/raspberry-pi-jira-information-raditor/"/>
+   <updated>2012-06-01T00:00:00+01:00</updated>
+   <id>http://recursive-design.comblog/2012/06/01/raspberry-pi-jira-information-raditor</id>
+   <content type="html">&lt;p&gt;Most of you would of heard of the Raspberry Pi - a low powered credit card sized computer released in the last few months. After a wait I managed to get my hands on one of these nifty devices and have put one of my ideas into action: a power efficient information radiator.&lt;/p&gt;
 
 &lt;p&gt;Information radiators are very useful visual tools that allow anyone at a glance to see the state of the project and receive feedback from important systems. Typically an old or spare PC is used to run a web browser rendering information to a large screen or TV displayed in the team's work area. JIRA has a handy Wallboard plugin that can turn any dashboard into a format to appear on a Information Radiator.&lt;/p&gt;
 
@@ -73,14 +83,15 @@
 &lt;h3&gt;Notes&lt;/h3&gt;
 
 &lt;p&gt;I have tested some TV's with the Raspberry PI and the Raspian distribution and some of them have had issues with the xserver. I haven't had enough time to investigate these issues in detail but a manual configuration of the xserver should be the solution.&lt;/p&gt;
-</description>
-				<published>2012-06-01 00:00:00 +0100</published>
-				<link>http://www.hindsighttesting.com/blog/2012/06/01/raspberry-pi-jira-information-raditor/</link>
-			</item>
-		
-			<item>
-				<title>Security testing with Selenium and the Zed Attack Proxy (ZAP)</title>
-				<description>&lt;p&gt;A few weeks ago I had the pleasure of speaking at the 2012 Selenium Conf in London. My presentation was on &quot;Automated Security Testing&quot; using Selenium and the Zed Attack Proxy. All the SeConf presentations have been recorded and I thought I would share my talk with you now it has been published.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Security testing with Selenium and the Zed Attack Proxy (ZAP)</title>
+   <link href="http://hindsighttesting.comblog/2012/05/18/automated-security-testing-selenium-zap/"/>
+   <updated>2012-05-18T00:00:00+01:00</updated>
+   <id>http://recursive-design.comblog/2012/05/18/automated-security-testing-selenium-zap</id>
+   <content type="html">&lt;p&gt;A few weeks ago I had the pleasure of speaking at the 2012 Selenium Conf in London. My presentation was on &quot;Automated Security Testing&quot; using Selenium and the Zed Attack Proxy. All the SeConf presentations have been recorded and I thought I would share my talk with you now it has been published.&lt;/p&gt;
 
 &lt;object style=&quot;height: 460px; width: 760px&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/aVFZFi_6B9g?version=3&amp;feature=player_detailpage&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;&gt;&lt;embed src=&quot;http://www.youtube.com/v/aVFZFi_6B9g?version=3&amp;feature=player_detailpage&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; allowScriptAccess=&quot;always&quot; width=&quot;760&quot; height=&quot;460&quot;&gt;&lt;/object&gt;
 
@@ -94,11 +105,10 @@
 &lt;li&gt;Run the JUnit test &quot;JobManagementTest&quot; in my &lt;a href=&quot;https://github.com/aparkinson/jenkins-webdriver&quot;&gt;GitHub project&lt;/a&gt;. Note: this test uses Chrome&lt;/li&gt;
 &lt;/ol&gt;
 
-</description>
-				<published>2012-05-18 00:00:00 +0100</published>
-				<link>http://www.hindsighttesting.com/blog/2012/05/18/automated-security-testing-selenium-zap/</link>
-			</item>
-		
-	</channel>
-</rss>
+</content>
+ </entry>
+ 
+ 
+</feed>
+
 

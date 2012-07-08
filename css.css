@@ -1,8 +1,10 @@
+
+
 .blogbutton {
     position: absolute;
     top: 0;
     right: 100px;
-    background-color:#B7B7B7;
+    background-color:#ffffff;
     -moz-border-bottom-left-radius: 8px;
     -webkit-border-bottom-left-radius: 8px;
     -khtml-border-bottom-left-radius: 8px;
@@ -15,21 +17,12 @@
     font-weight:bold;
 }
 .blogbutton a {
-    color: #ffffff;
+    color: #888888;
     text-decoration: none;
 }
 .blogbutton a:hover {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-header h1, header h1 a{
-	text-align: center;
-	margin: 40px 0 20px 0;
-	font-size: 40px;
-	letter-spacing: -2px;
-	color: #404040;
-	text-decoration: none;
+    color: #e85809;
+    text-decoration: underline;
 }
 
 .container{
@@ -44,7 +37,7 @@ header h1, header h1 a{
 
 .content p {
     font-size: 14px;
-    color: #888888;
+    color: #333333;
 }
 
 .content ul {
@@ -56,35 +49,31 @@ header h1, header h1 a{
 }
 
 .content h3.title{
-	background: #B7B7B7;
-	padding-left: 10px;
+/*	background: #B7B7B7;*/
+    border-bottom: 3px solid #b74507;
+/*	padding-left: 10px;*/
 	font-size: 18px;
 	text-decoration: none;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	
+	color: #333333;
 }
 .content .title a {
-    color: #ffffff;
-}
-.blogbutton a:hover {
-    color: #ffffff;
-    text-decoration: underline;
+    color: #333333;
 }
 
 .content h2 {
     font-size: 18px;
-    color: #B7B7B7;
+    color: #555555;
 }
 
 .content h3 {
     font-size: 16px;
-    color: #B7B7B7;
+    color: #555555;
 }
 
 .sidebar h4 {
-    color: #B7B7B7;
-    color: #B7B7B7;
+    color: #555555;
 }
 
 .centerblock{
@@ -106,7 +95,7 @@ ul.features{
     list-style: none;
     line-height: 160%;
     float: left;
-    color: #6c6c6c;
+    color: #333333;
 }
 
 ul.features li{
@@ -165,12 +154,12 @@ a:hover {
 }
 
 /* MailChimp Form Embed Code - Slim - 08/17/2011 */
-#mc_embed_signup form {display:block; position:relative; text-align:left; padding:10px 0 10px 3%; text-align: center;}
+#mc_embed_signup form {display:block; position:relative; text-align:left; padding:0; text-align: center;}
 #mc_embed_signup h2 {font-weight:bold; padding:0; margin:15px 0; font-size:1.4em;}
-#mc_embed_signup input {border:1px solid #999; -webkit-appearance:none;}
+#mc_embed_signup input {border:2px solid #CCCCCC; -webkit-appearance:none;}
 #mc_embed_signup input[type=checkbox]{-webkit-appearance:checkbox;}
 #mc_embed_signup input[type=radio]{-webkit-appearance:radio;}
-#mc_embed_signup input:focus {border-color:#333;}
+#mc_embed_signup input:focus {border:none; border-bottom: 2px solid #333; }
 #mc_embed_signup .button {clear:both; background-color: #b7b7b7; border: 0 none; border-radius:4px; color: #FFFFFF; cursor: pointer; display: inline-block; font-size:15px; font-weight: bold; height: 32px; line-height: 32px; margin: 0 5px 10px 0; padding:0; text-align: center; text-decoration: none; vertical-align: top; white-space: nowrap; width: auto;}
 #mc_embed_signup .button:hover {background-color:#777;}
 #mc_embed_signup .small-meta {font-size: 11px;}
@@ -178,7 +167,7 @@ a:hover {
 #mc_embed_signup .clear {clear:none; display:inline;}
 
 #mc_embed_signup label {display:block; font-size:16px; padding-bottom:10px; font-weight:bold;}
-#mc_embed_signup input.email {display:inline; padding:8px 0; margin:0 4% 10px 0; text-indent:5px; width:58%; min-width:130px;}
+#mc_embed_signup input.email {display:inline; padding:8px 0; margin:0 4% 10px 0; text-indent:5px; width:58%; min-width:130px; background: #333333;}
 #mc_embed_signup input.button {display:inline; width:35%; margin:0 0 10px 0; min-width:90px;}
 
 #mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; width:90%;margin: 0 5%; clear: both;}
@@ -187,12 +176,89 @@ a:hover {
 #mc_embed_signup #mce-success-response {color:#529214; display:none;}
 #mc_embed_signup label.error {display:block; float:none; width:auto; margin-left:1.05em; text-align:left; padding:.5em 0;}
 #mc_embed_signup{
-    background:#fff; 
     clear:left; 
-    width: 400px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
+    margin-top: 20px;
     display: block;
+    padding-right: 10px;
 }
 
+#header {
+    background: #e85809;
+    border-bottom: 3px solid #b74507;
+}
+#header h1 {
+    font-size: 40px;
+    letter-spacing: -2px;
+    color: #333333;
+    text-decoration: none;
+    margin: 0;
+    margin-left: -98px;
+}
+
+.group {
+    width: 960px;
+    padding: 10px;
+    margin: 0 auto;
+    position: relative;
+}
+.left {
+    width: 460px;
+    float: left;
+}
+.right {
+    width: 460px;
+    float: right;
+}
+#headline {
+    background: #ffffff;
+    position: relative;
+    color: #888888;
+    margin: 20px 0;
+}
+#headline h1 {
+    color: #333333;
+    margin: 0;
+}
+#headline h1 .behave {
+    color: #e85809;
+}
+#headline h3 {
+    color: #333333;
+}
+#behave-strap {}
+#features {
+    background: #F2F2F2;
+    position: relative;
+    padding: 20px 0;
+}
+
+#footer {
+    border-top: 3px solid #666666;
+    background: #333333;
+}
+#footer h3 {
+    color: #EEEEEE;
+}
+#feedback {
+    margin-right: 10px;
+    width: 400px;
+    float: left;
+    border-right: 1px dotted #666666;
+}
+#corporate {
+    margin-right: 10px;
+    width: 400px;
+    float: left;
+    border-right: 1px dotted #666666;
+    color: #CCCCCC;
+}
+#social {
+    width: 138px;
+    float: right;
+}
+
+#features a {
+    color: #E85809;
+}
