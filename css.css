@@ -1,4 +1,14 @@
-
+#behave-strap .left {
+    margin-left: 10px;
+}
+.floating {
+    position: absolute;
+    width: 300px;
+    height: 210px;
+    top: 240px;
+    left: 330px;
+    text-align: center;
+}
 
 .blogbutton {
     position: absolute;
@@ -100,9 +110,15 @@ ul.features{
 
 ul.features li{
     background: url('assets/tick.png') 0px 3px no-repeat;
+    color: black;
 /*    padding-left: 35px;*/
     padding: 8px 0 8px 35px;
     text-align: left;
+}
+
+#features li{
+    color: inherit;
+    margin-bottom: 0.5em;
 }
 
 #bottom_page{
@@ -137,10 +153,10 @@ ul.features li{
 }
 
 a {
-    color: #444444;
+    color: #e85809;
 }
 a:hover {
-    color: #444444;
+    color: #ff8000;
     text-decoration: underline;
 }
 
@@ -154,7 +170,7 @@ a:hover {
 }
 
 /* MailChimp Form Embed Code - Slim - 08/17/2011 */
-#mc_embed_signup form {display:block; position:relative; text-align:left; padding:0; text-align: center;}
+/*#mc_embed_signup form {display:block; position:relative; text-align:left; padding:0; text-align: center;}
 #mc_embed_signup h2 {font-weight:bold; padding:0; margin:15px 0; font-size:1.4em;}
 #mc_embed_signup input {border:2px solid #CCCCCC; -webkit-appearance:none;}
 #mc_embed_signup input[type=checkbox]{-webkit-appearance:checkbox;}
@@ -182,11 +198,11 @@ a:hover {
     margin-top: 20px;
     display: block;
     padding-right: 10px;
-}
+}*/
 
 #header {
     background: #e85809;
-    border-bottom: 3px solid #b74507;
+    border-bottom: 3px solid #cd6700; /* e85809 or b74507 */
 }
 #header h1 {
     font-size: 40px;
@@ -195,6 +211,23 @@ a:hover {
     text-decoration: none;
     margin: 0;
     margin-left: -98px;
+}
+
+ul#tabmenu {margin: 0; padding: 0; position: absolute; top: 0; right: 100px; list-style: none outside none;}
+ul#tabmenu li {
+    background-color:#ffffff;
+    -moz-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -khtml-border-bottom-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    -moz-border-bottom-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -khtml-border-bottom-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 8px;
+    margin: 0 8px;
+    font-weight:bold;
+    float: left;
 }
 
 .group {
@@ -215,7 +248,7 @@ a:hover {
     background: #ffffff;
     position: relative;
     color: #888888;
-    margin: 20px 0;
+    margin: 0 0 10px 0;
 }
 #headline h1 {
     color: #333333;
@@ -227,19 +260,44 @@ a:hover {
 #headline h3 {
     color: #333333;
 }
-#behave-strap {}
+#behave-strap { padding: 0; height: 460px; }
+#cta { background: #333333; color: white; font-size: 18px; height: 100px; vertical-align: middle; padding: 20px 0; }
+#cta {
+	background-image: linear-gradient(bottom, rgb(51,51,51) 0%, rgb(68,68,68) 58%, rgb(74,74,74) 93%);
+	background-image: -o-linear-gradient(bottom, rgb(51,51,51) 0%, rgb(68,68,68) 58%, rgb(74,74,74) 93%);
+	background-image: -moz-linear-gradient(bottom, rgb(51,51,51) 0%, rgb(68,68,68) 58%, rgb(74,74,74) 93%);
+	background-image: -webkit-linear-gradient(bottom, rgb(51,51,51) 0%, rgb(68,68,68) 58%, rgb(74,74,74) 93%);
+	background-image: -ms-linear-gradient(bottom, rgb(51,51,51) 0%, rgb(68,68,68) 58%, rgb(74,74,74) 93%);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(51,51,51)),
+		color-stop(0.58, rgb(68,68,68)),
+		color-stop(0.93, rgb(74,74,74))
+	);
+}
+#cta .left { width: 280px; text-align: right; }
+#cta .right { width: 640px; }
+#cta ul {margin: 0; padding: 0; list-style: none outside none; }
+#cta li {margin: 0 0 12px 0; color: #BBBBBB; }
+#cta li:first-child {font-size: 22px; font-weight: normal; color: white; }
 #features {
-    background: #F2F2F2;
+    background: #F0F0F0;
     position: relative;
     padding: 20px 0;
 }
+#features h3 { border-bottom: 1px solid #CCCCCC; margin-bottom: 8px; }
+#features .left { text-align: left; }
+#features .left h3 { text-align: left; }
 
 #footer {
     border-top: 3px solid #666666;
     background: #333333;
 }
 #footer h3 {
-    color: #EEEEEE;
+    color: white;
 }
 #feedback {
     margin-right: 10px;
@@ -248,17 +306,33 @@ a:hover {
     border-right: 1px dotted #666666;
 }
 #corporate {
-    margin-right: 10px;
+    margin-left: 12px;
+    padding-left: 12px;
     width: 400px;
     float: left;
-    border-right: 1px dotted #666666;
+    border-left: 1px dotted #666666;
     color: #CCCCCC;
 }
+#corporate .name { color: white; font-weight: bold; margin-bottom: 6px; font-size: 18px; }
 #social {
-    width: 138px;
-    float: right;
+    width: 80px;
+    float: left;
 }
 
 #features a {
     color: #E85809;
 }
+#signup { float: right; width: 400px; color: #EEEEEE; }
+#mc_embed_signup { width: 320px; float: right; }
+#mc_embed_signup h3 { text-align: right; line-height: 1em; margin-bottom: 8px; }
+#mc_embed_signup ul { list-style: none outside none; margin: 3px 0 0 0; padding: 0; float: right;}
+#mc_embed_signup li {
+	float: right;
+	padding: 0;
+	margin-left: 16px;
+}
+#mc_embed_signup label { margin-right: 8px; line-height: 22px; padding-top: 0; width: auto; color: #EEEEEE;}
+#mc_embed_email label { float: left; color: #EEEEEE; }
+#mc_embed_email input { float: right; }
+#mc-embedded-subscribe { padding: 4px 16px; float: right; }
+.mc-field-group { margin: 4px 0;}
