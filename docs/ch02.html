@@ -1,0 +1,26 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;2.&nbsp;Quick Start Guide</title><link rel="stylesheet" href="css.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="manual.html" title="Behave for JIRA Documentation"><link rel="up" href="manual.html" title="Behave for JIRA Documentation"><link rel="prev" href="ch01s03.html" title="Importing existing Cucumber Projects"><link rel="next" href="ch02s02.html" title="Running the Acceptance Test with Cucumber"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter&nbsp;2.&nbsp;Quick Start Guide</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch01s03.html">Prev</a>&nbsp;</td><th width="60%" align="center">&nbsp;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ch02s02.html">Next</a></td></tr></table><hr></div><div class="chapter" title="Chapter&nbsp;2.&nbsp;Quick Start Guide"><div class="titlepage"><div><div><h2 class="title"><a name="d0e43"></a>Chapter&nbsp;2.&nbsp;Quick Start Guide</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="ch02.html#d0e48">Setting up a JIRA project</a></span></dt><dt><span class="section"><a href="ch02s02.html">Running the Acceptance Test with Cucumber</a></span></dt><dd><dl><dt><span class="section"><a href="ch02s02.html#d0e80">Configuring Maven</a></span></dt><dt><span class="section"><a href="ch02s02.html#d0e91">Configuring Cucumber</a></span></dt></dl></dd></dl></div><p>This tutorial will briefly run you through using a JIRA project for ATDD/BDD software development.</p><div class="section" title="Setting up a JIRA project"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e48"></a>Setting up a JIRA project</h2></div></div></div><p>
+	  Create a new JIRA project with the name "Demonstration of the Behave Maven Plugin and Cucumber" and project key as "DEMO". 
+	  Create a new "New Feature" issue with the summary set as "Add content assist to the Google Search field". On the "Issue View" 
+	  page of your newly created issue you will see a section called "Acceptance Tests". All acceptance tests/scenarios for the issue will appear in this section.	  
+	  </p><div class="screenshot"><div><img src="images/quickStartAddAcceptanceTestToIssue.png"></div></div><p>
+	  Add a Acceptance test to the issue by clicking on the "Add" icon in the top right of the "Acceptance Test" section. This will open a dialog 
+	  where a new acceptance test scenario can be created or an existing one selected. To make management of scenarios easier they are grouped into features. 
+	  Scenarios are not grouped by JIRA issues because a scenario may be related to multiple JIRA Issues. As our project is new we don't have any features or scenarios yet and the "Add" dialog will be empty.	  
+	  </p><div class="screenshot"><div><img src="images/quickStartAddAcceptanceTestToIssueAddFeature.png"></div></div><p>
+	  In the "Add" dialog create a new "Feature" with the name "Help users write search queries" and then create a new "Scenario" with called "Add content assist to the Google Search field".
+	  When you have created the scenario, click on it to select it (its background will be light blue when selected) and then add the newly created scenario by clicking on "Add to Issue" button 
+	  in the bottom right hand corner of the dialog.
+	  </p><div class="screenshot"><div><img src="images/quickStartAddAcceptanceTestToIssueAttach.png"></div></div><p>
+		We now have a Scenario attached as an Acceptance Test to our JIRA Issue. This Scenarios isn't of much use at the moment because we haven't described the scenarios using steps (You may have 
+		noticed the messge "no step definations defined" below the scenario name). We will now edit our scenario by clicking the pencil icon and add steps to describe our scenario by  clicking in the text area. 
+		A step is a single line of natural lanaguage started with a single keyword. This syntaxt/lanaguage is know as Gherkin and has the following keywords: Given, When, Then, And and But.		
+	  </p><div class="screenshot"><div><img src="images/quickStartAboutToEditScenario.png"></div></div><p>
+	  Add the following steps to the Scenarios editor
+	  </p><pre class="programlisting">
+Given I am about to search
+When I begin to type my query
+Then a list of suggestions shuld appear below the search field
+And the suggestions should update as I type</pre><p>
+	  </p></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch01s03.html">Prev</a>&nbsp;</td><td width="20%" align="center">&nbsp;</td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ch02s02.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Importing existing Cucumber Projects&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="manual.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Running the Acceptance Test with Cucumber</td></tr></table></div></body></html>
