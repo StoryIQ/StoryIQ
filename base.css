@@ -1,0 +1,144 @@
+html, body {font-size: 15px; color: #333333}
+body {background: white}
+a {color: #336da6; text-decoration: none}
+a:active, a:visited {color: #036}
+.cen {margin: 0 auto; width: 960px}
+.center {text-align: center}
+.clear {clear: both}
+.clearfix:after {content: "."; display: block; height: 0; clear: both; visibility: hidden}
+.clearfix {display: inline-block}
+.text-right {text-align: right}
+
+section {clear: both}
+header.page {width: 100%; background: white; /*border-bottom: 3px solid #cd6700;*/ } /* */
+header.page .cen {border-bottom: 3px solid #777777; height: 66px; }
+header.page h1 {position: absolute; letter-spacing: -2px; color: #333333; text-decoration: none; margin: 0; margin-left: -66px; margin-top: 24px}
+header.page h1 a {display: block; padding: 0; margin: 0}
+nav.page {position: relative; padding: 0 4px 4px 4px; width: 100%;}
+nav.page ul {margin: 0 4px 0 0; padding: 0; float:right}
+nav.page li {float: left}
+nav.page li a {font-size: 14px; display: block; padding: 34px 10px 10px 10px; color: #777777; line-height: 22px; font-weight: bold; text-decoration: none; text-transform: uppercase;}
+					   
+.buffer {}
+
+#strap {background:white; height: 450px}
+#strap img {position: absolute;}
+#strap .cen .floating {position: absolute; z-index: 3; margin-left:523px; margin-top: -4px;}
+#key-points {position: absolute; margin: 0; margin-top: 260px; margin-left: 90px; width: 500px; padding: 0; list-style: square none outside /*list-style: square url('assets/tick.png') outside*/}
+#key-points li {color: #333333; font-size: 15px; margin-bottom: 8px;}
+#strap-social {position: absolute; margin-top: 400px; margin-left: 264px}
+/*a#cta:hover section {background: #e85809}*/
+
+#news aside {float: right; width: 300px}
+#news article {float: left; width: 640px; border-top: 3px solid #777777}
+#news article h3 {margin: 20px 0 0 0}
+div.more a {display: block; text-align: right; margin: 10px 0}
+div.datetime {color: #aaaaaa; font-size: 12px; margin: 0 0 20px 0}
+div.datetime span {color: #777777}
+
+#call-to-action {margin: 20px 0}
+#call-to-action .cen {-webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px}
+.wrap {display: block; padding: 10px;}
+#cta, #moreinfo, #subscribe {text-decoration: none; display: block; color: white; background: #333333; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; margin: 0 0 10px 0; text-align: center}
+#cta img {-webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; margin: 20px 0 0 0}
+#cta h2 {margin: 0; padding: 0; font-size: 32px;}
+#moreinfo {text-decoration: none;}
+.left-3 {float: left; width: 320px}
+.mid-3 {float: left; width: 320px}
+.right-3 {float: right; width: 320px}
+
+#mc_embed_signup ul {margin: 10px 0 10px 60px; list-style: none inside none}
+#mc_embed_signup ul li {float: left; margin-right: 10px}
+#mc-embedded-subscribe {margin: 10px 0;}
+
+#overview {margin: 10px 0}
+#overview .cen {}
+#overview nav {float: left; width: 120px; display: block}
+#overview nav ul {margin: 0; padding: 0; display: block}
+#overview nav ul li {margin-bottom: 10px;}
+#overview nav ul li:last-child {margin-bottom: 0}
+#overview nav a {background: #f0f0f0; display: block; padding: 10px 14px; text-decoration: none; font-weight: bold; font-size: 14px; color: #777777; border: 0px solid #777777; border-bottom: 4px solid #777777}
+#overview nav a {-webkit-border-radius: 8px 8px 8px 0; -moz-border-radius: 8px 8px 8px 0; border-radius: 8px 8px 8px 0}
+#overview nav a.selected {border-color: #e85809; color: #333333}
+
+
+/*#overview article {float: right; width: 720px; background: white; margin-bottom: 20px; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; padding: 20px; border: 1px solid #cccccc; border-bottom: 4px solid #bbbbbb}*/
+#overview article {margin-bottom: 20px; clear: both}
+#overview article section {margin-bottom: 20px}
+#overview article h3 {margin: 0 0 20px 0; color: #333333; border-bottom: 2px solid #cccccc;}
+#overview article h4 {margin: 0 0 10px 0; color: #333333}
+#overview article span {display: block;}
+#overview article span img {margin: 0 auto}
+#overview article li {margin-right: 20px}
+#elements {float: right; width: 830px}
+.left {float: left; width: 410px}
+.right {float: right; width: 410px}
+#tabs-5 
+
+#ifr {width: 540px; margin: 0 auto}
+
+#support {background: #dddddd; padding: 20px}
+#support a {color: #bbbbbb; background: white; text-decoration: none; display: block; width: 266px; height: 160px; padding: 20px; border-bottom: 5px solid #bbbbbb; float: left}
+#support a:hover {color: white}
+#support a.left {margin-right: 20px}
+#support a.middle {width: 267px}
+#support a.right {margin-left: 20px}
+#support h2 {font-size: 70px; margin: 90px 0 0 0; position: absolute; color: #dddddd}
+#support a:hover h2 {color: white}
+#support h3 {margin: 65px 0 0 0; text-align: center}
+
+footer.page address {color: #cccccc; font-style:normal; font-size:12px; line-height:1.3em; text-align:center; padding: 10px; color: #999999}
+footer.page address .org {font-weight:bold; font-size: 14px; margin-bottom: 5px}
+footer.page a {color: #333333; text-decoration: none;}
+
+
+/* BLOG PAGE */
+#articles {padding: 10px 0}
+#articles article {margin: 30px 0}
+#articles .cen {border-bottom: 2px solid #777777}
+.post-wrap {float: left; width: 760px; margin-bottom: 20px;}
+.post-title h2 {margin: 0 0 10px 0; color: #333333; border-bottom: 2px solid #cccccc; font-size: 22px}
+.post-title h2 a {text-decoration: none}
+.post-content { color: #333333 }
+.post-content h2 {font-size: 18px;}
+.post-social {margin-top: 20px; float: right; width: 157px;}
+.post-social .label {color: #999999; font-size: 12px; display: block}
+.post-social h4 {margin: 0 0 10px 0}
+#solo-article {padding: 10px 0}
+
+/* color gradients */
+#support a.left:hover {
+border-bottom: 5px solid #438d00;
+color: #438d00;
+background: rgb(210,255,82); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(210,255,82,1)), color-stop(100%,rgba(145,232,66,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(210,255,82,1) 0%,rgba(145,232,66,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(210,255,82,1) 0%,rgba(145,232,66,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(210,255,82,1) 0%,rgba(145,232,66,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(210,255,82,1) 0%,rgba(145,232,66,1) 100%); /* W3C */
+}
+#support a.middle:hover {
+border-bottom: 5px solid #a54600;
+color: #a54600;
+background: rgb(255,147,89); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(255,147,89,1) 0%, rgba(232,88,9,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,147,89,1)), color-stop(100%,rgba(232,88,9,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(255,147,89,1) 0%,rgba(232,88,9,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(255,147,89,1) 0%,rgba(232,88,9,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(255,147,89,1) 0%,rgba(232,88,9,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(255,147,89,1) 0%,rgba(232,88,9,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9359', endColorstr='#e85809',GradientType=0 ); /* IE6-9 */
+}
+#support a.right:hover {
+border-bottom: 5px solid #036;
+color: #036;
+background: rgb(109,179,242); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(109,179,242,1) 0%, rgba(30,105,222,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(109,179,242,1)), color-stop(100%,rgba(30,105,222,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(109,179,242,1) 0%,rgba(30,105,222,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(109,179,242,1) 0%,rgba(30,105,222,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(109,179,242,1) 0%,rgba(30,105,222,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(109,179,242,1) 0%,rgba(30,105,222,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de',GradientType=0 ); /* IE6-9 */
+}

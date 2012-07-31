@@ -4,13 +4,28 @@
  <title>Blogging with Hindsight</title>
  <link href="http://hindsighttesting.com/blog/feed.xml" rel="self"/>
  <link href="http://hindsighttesting.com/"/>
- <updated>2012-07-18T15:30:50+01:00</updated>
+ <updated>2012-07-31T21:20:21+01:00</updated>
  <id>http://hindsighttesting.com/blog</id>
  <author>
    <name>Hindsight Software Ltd</name>
    <email>mail@hindsighttesting.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Behave for JIRA wins "Best Marketplace paid add-on" in Codegeist 2012</title>
+   <link href="http://hindsighttesting.comblog/2012/07/30/acceptance-testing-wins-in-codegeist/"/>
+   <updated>2012-07-30T00:00:00+01:00</updated>
+   <id>http://recursive-design.comblog/2012/07/30/acceptance-testing-wins-in-codegeist</id>
+   <content type="html">&lt;p&gt;In a record field of 94 high quality entries Behave for JIRA fought its way to win &quot;Best Marketplace-enabled Plugin&quot; in Atlassian's Codegiest 2012.
+Codegiest is annual competition held by Atlassian to find the best product extensions for JIRA, Confluence, GreenHopper, Bamboo, Stash, Bitbucket and the other Atlassian tools.
+&lt;img style=&quot;float:right; padidng-left: 1em;&quot; src=&quot;/blog/gallery/codegeist2012_logo.png&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;This was the 6th running of the annual competition and there were 94 entries, covering 6 different Atlassian products. Judging of the competition of done by Mike Cannon-Brookes (co-CEO of Atlassian), Tim Don and Jonathan Nolen. Contestants had 6 weeks from the announcement of the competition at Atlassian Summit to build their entries.&lt;/p&gt;
+
+&lt;p&gt;Get your full roundup of the Codegiest 2012 results at the &lt;a href=&quot;https://blogs.atlassian.com/2012/07/announcing-the-codegeist-2012-winners/&quot;&gt;Atlassian website&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>A Slice of Pi with your Information Radiator</title>
@@ -93,7 +108,7 @@
    <id>http://recursive-design.comblog/2012/05/18/automated-security-testing-selenium-zap</id>
    <content type="html">&lt;p&gt;A few weeks ago I had the pleasure of speaking at the 2012 Selenium Conf in London. My presentation was on &quot;Automated Security Testing&quot; using Selenium and the Zed Attack Proxy. All the SeConf presentations have been recorded and I thought I would share my talk with you now it has been published.&lt;/p&gt;
 
-&lt;object style=&quot;height: 460px; width: 760px&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/aVFZFi_6B9g?version=3&amp;feature=player_detailpage&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;&gt;&lt;embed src=&quot;http://www.youtube.com/v/aVFZFi_6B9g?version=3&amp;feature=player_detailpage&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; allowScriptAccess=&quot;always&quot; width=&quot;760&quot; height=&quot;460&quot;&gt;&lt;/object&gt;
+&lt;object style=&quot;height: 460px; width: 760px&quot;&gt;&lt;param name=&quot;wmode&quot; value=&quot;transparent&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/aVFZFi_6B9g?version=3&amp;feature=player_detailpage&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;&gt;&lt;embed src=&quot;http://www.youtube.com/v/aVFZFi_6B9g?version=3&amp;feature=player_detailpage&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; allowScriptAccess=&quot;always&quot; width=&quot;760&quot; height=&quot;460&quot;&gt;&lt;/object&gt;
 
 
 &lt;h3&gt;Recreating my demo&lt;/h3&gt;

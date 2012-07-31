@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Acceptance Test Driven Development for Atlassian JIRA - Hindsight Testing</title>
+	<title>Behave for JIRA from Hindsight Testing Software - Hindsight Testing</title>
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Overlock" type="text/css">
 	<link rel="stylesheet" href="/normalize.css" type="text/css">
 	<link rel="stylesheet" href="/base.css" type="text/css">
@@ -42,67 +42,111 @@
 		</div>
 	</div>
 </section>
-
-<section id="news">
+<section id="overview">
 	<div class="cen">
-		<aside>
-			<a id="cta" target="_blank" href="https://marketplace.atlassian.com/plugins/com.hindsighttesting.behave.jira" alt="Behave at the Atlassian Marketplace">
-<div class="wrap">
-	<h2>Get started now.</h2>
-	<span>50% off first year while in Beta</span>
-	<div class="center"><img src="/assets/marketplace.png" alt="Behave at the Atlassian Marketplace" title="Behave at the Atlassian Marketplace" />
+		<nav id="tabs">
+			<ul>
+				<li><a href="#tabs-1">Overview</a></li>
+				<li><a href="#tabs-2">Benefits</a></li>
+				<li><a href="#tabs-3">Simplicity</a></li>
+				<li><a href="#tabs-4">Automation</a></li>
+				<li><a href="#tabs-5">Integration</a></li>
+			</ul>
+		</nav>
+		<div id="elements">
+			<article id="tabs-1">
+				<div class="left">
+					<h3>Overview</h3>
+					<p>
+						Behave for JIRA is a powerful and easy to use agile testing and requirements discovery tool. It allows users to take TDD to the next step, <strong>Acceptance Test Driven Development</strong>. 
+					</p>
+					<p>
+						Specific needs of a software product are expressed as acceptance criteria on User Stories, invaluable for discovering the real requirements through discussion. The acceptance criteria can then be automated as tests with Cucumber to provide instant feedback on software development progress.
+					</p>
+				</div>
+				<div class="right">
+					<div id="ifr">
+						<iframe width="410" height="308" src="http://www.youtube.com/embed/iiYRWqTUi0Y?wmode=transparent" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</article>
+			<article id="tabs-2">
+				<h3>Benefits</h3>
+				<div class="left">
+					<h4>As a product owner</h4>
+					<ul>
+						<li>Be clear and upfront about what you want your software to achieve</li>
+						<li>Use simple natural language to include all stakeholders in the discussion</li>
+						<li>Know when your software meets the acceptance criteria</li>
+						<li>Streamline your interaction with developers - they know exactly which scenarios they need to cover</li>
+					</ul>
+					<h4>As a developer</h4>
+					<ul>
+						<li>Understand what your clients expect in defined and testable terms before writing any code</li>
+						<li>Focus on implementing the scenario at hand, rather than endless back and forth clarifying requirements</li>
+						<li>Know when you've written the code the client wants - and the client knows it too!</li>
+					</ul>
+				</div>
+				<div class="right">
+					<h4>As a tester</h4>
+					<ul>
+						<li>Get the context right from the start about how to test the software - test in line with stakeholders expectations</li>
+						<li>Full regression protection at a scenario level - know when end-to-end functionality gets broken</li>
+					</ul>
+					<h4>As a software user</h4>
+					<ul>
+						<li>See living documentation that reflects the needs of the user rather than the eccentricities of the development team!</li>
+						<li>Be a part of the discussion for future features and fixes in the software</li>
+					</ul>
+				</div>
+			</article>
+			<article id="tabs-3">
+				<div class="left">
+					<h3>Simplicity</h3>
+					<span>
+						Acceptance Criteria are written as Scenarios which define clear contexts and events in the application and there expected results. Written
+						in a clear and logical "Given, When, Then" natural language syntax called Gherkin. Natural language menas simple to understand for
+						all stakeholders. Step by step definition is concise enough to be implemented by developers.
+					</span>
+				</div>
+				<div class="right text-right">
+					<img src="/assets/scenario_editing.png" alt="Scenario in the Given When Then format" title="Scenarios Editing" />
+				</div>
+			</article>
+			<article id="tabs-4">
+				<h3>Automation</h3>
+	            <div class="left">
+		            <h4>Testing Army</h4>
+		            <span>
+		                Don't let your test engineers become expensive keyboard automation tools,
+		                Behave for JIRA can generate acceptance tests for the leading open source BDD
+		                automation framework, Cucumber. Cucumber supports a number of programming
+		                languages including: Java, Ruby, and Scala.
+		            </span>
+	            </div>
+	            <div class="right">
+		            <h4>To automate or not to automate?</h4>
+		            <span>
+		                Test automation is not suited to every situation - Behave for JIRA has it covered. A mixture of automated and manual testing can be achieved
+		                by marking individual acceptance criteria as "Manual" to stop them being run by Cucumber.
+		            </span>
+	            </div>
+			</article>
+			<article id="tabs-5">
+	            <div class="left">
+	                <h3>Integration</h3>
+	                <span>
+		                The Atlassian Cucumber integration doesn't stop at JIRA, Bamboo users can take
+		                advantage of the Cucumber Report Plugin. The plugin is <a href="https://marketplace.atlassian.com/plugins/com.hindsighttesting.behave.cucumber-bamboo-plugin" target="_blank">available for download</a> on the Atlassian Marketplace
+	            	</span>
+	            </div>
+	            <div class="right text-right">
+	            	<img src="/assets/products.png" alt="Supported Products" title="Supported Products">
+	            </div>
+			</article>
+		</div>
 	</div>
-	<div class="clear"></div>
-</div> </a>
-<a id="moreinfo" href="/behave/" alt="Find out More" title="Find out More">
-<div class="wrap">
-	<h2>Find out more.</h2>
-</div> </a>
-<div id="subscribe">
-<div class="wrap">
-	<div id="mc_embed_signup">
-		<form action="http://storyiq.us2.list-manage2.com/subscribe/post?u=1161fa9d724126772d2e04bc1&amp;id=487dd49ae3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-			<h2>Keep up to date.</h2>
-			<div class="mc-field-group">
-				<label for="mce-EMAIL">Email Address</label>
-				<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-			</div>
-			<div class="mc-field-group input-group">
-				<ul>
-					<li>
-						<input type="radio" value="html" name="EMAILTYPE" id="mce-EMAILTYPE-0">
-						<label for="mce-EMAILTYPE-0">html</label>
-					</li>
-					<li>
-						<input type="radio" value="text" name="EMAILTYPE" id="mce-EMAILTYPE-1">
-						<label for="mce-EMAILTYPE-1">text</label>
-					</li>
-					<li>
-						<input type="radio" value="mobile" name="EMAILTYPE" id="mce-EMAILTYPE-2">
-						<label for="mce-EMAILTYPE-2">mobile</label>
-					</li>
-				</ul>
-			</div>
-			<div id="mce-responses" class="clear">
-				<div class="response" id="mce-error-response" style="display:none"></div>
-				<div class="response" id="mce-success-response" style="display:none"></div>
-			</div>
-			<div class="clear">
-				<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-			</div>
-		</form>
-	</div>
-</div> </div>
-		</aside>
-		<h1>Recent News</h1>
-		<article>
-			<h3 class="title"><a href="/blog/2012/07/30/acceptance-testing-wins-in-codegeist/">Behave for JIRA wins "Best Marketplace paid add-on" in Codegeist 2012</a></h3>
-			<div class="datetime">Posted: <span>2012-07-30</span></div>
-			In a record field of 94 high quality entries Behave for JIRA fought its way to win "Best Marketplace-enabled Plugin" in Atlassian's Codegiest 2012. Codegiest is annual competition held by Atlassian to find the best product extensions for JIRA, Confluence, GreenHopper, Bamboo, Stash, Bitbucket and the other Atlassian tools. This was the 6th running of the annual competition and there...
-			<div class="more"><a href="/blog/2012/07/30/acceptance-testing-wins-in-codegeist/">Read more...</a></div>
-		</article>
-		<div class="clear"> </div>
-	</div>
+	<div class="clear"> </div>
 </section>
 
 </div> <!-- end buffer -->
