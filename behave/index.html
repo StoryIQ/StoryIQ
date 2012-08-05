@@ -32,7 +32,7 @@
 		<ul id="key-points">
 			<li>Discover requirements by collaborating with all stakeholders</li>
 			<li>Specify acceptance criteria as simple, human friendly scenarios</li>
-			<li>Generate skeleton code to be implemented by developers</li>
+			<li>Pull acceptance tests from JIRA into your build environment</li>
 			<li>Test with Cucumber to make sure your code does what it should</li>
 			<li>Build helpful documentation as your scenarios describe functionality</li>
 		</ul>
@@ -63,6 +63,15 @@
 					<p>
 						Specific needs of a software product are expressed as acceptance criteria on User Stories, invaluable for discovering the real requirements through discussion. The acceptance criteria can then be automated as tests with Cucumber to provide instant feedback on software development progress.
 					</p>
+					<h4>Feature Highlights</h4>
+					<ul id="featurehighlights">
+						<li><span>Add scenarios to individual User stories (or any JIRA Issue) as acceptance tests</span></li>
+						<li><span>Scenarios are written in a natural language called Gherkin (Given When Then) so any one can write them</span></li>
+						<li><span>Simple test management with the choice between manual and automated testing</span></li>
+						<li><span>Scenarios/Acceptance tests can be automated using Cucumber, a popular open source testing tool</span></li>
+						<li><span>No vendor lock in; you can export your tests from JIRA and continue to use them with just Cucumber</span></li>
+						<li><span>Selectively run automated tests based on if the parent JIRA issue is closed or in progress.</span></li>
+					</ul>
 				</div>
 				<div class="right">
 					<div id="ifr">
@@ -108,6 +117,11 @@
 						in a clear and logical "Given, When, Then" natural language syntax called Gherkin. Natural language menas simple to understand for
 						all stakeholders. Step by step definition is concise enough to be implemented by developers.
 					</span>
+					<p>
+					    Writing acceptance tests as scenarios in simple natural language allows everyone in a team to read and understand the requirements. If there 
+						is any miss understanding over a scenario, a discussion can take place between all the team members and the stakeholders. The scenario can be 
+						rewritten to include any clarifications discovered during the discussion.
+					</p>
 				</div>
 				<div class="right text-right">
 					<img src="/assets/scenario_editing.png" alt="Scenario in the Given When Then format" title="Scenarios Editing" />
@@ -119,7 +133,7 @@
 		            <h4>Testing Army</h4>
 		            <span>
 		                Don't let your test engineers become expensive keyboard automation tools,
-		                Behave for JIRA can generate acceptance tests for the leading open source BDD
+		                Behave for JIRA can generate acceptance tests for the leading open source BDD (Behavior driven development)
 		                automation framework, Cucumber. Cucumber supports a number of programming
 		                languages including: Java, Ruby, and Scala.
 		            </span>
@@ -127,8 +141,8 @@
 	            <div class="right">
 		            <h4>To automate or not to automate?</h4>
 		            <span>
-		                Test automation is not suited to every situation - Behave for JIRA has it covered. A mixture of automated and manual testing can be achieved
-		                by marking individual acceptance criteria as "Manual" to stop them being run by Cucumber.
+		                Automated testing is not suited to every situation - Behave for JIRA has it covered. A mixture of automated and manual testing can be achieved
+		                by marking individual acceptance criteria as "Manual" to stop them being run as Automated tests.
 		            </span>
 	            </div>
 			</article>

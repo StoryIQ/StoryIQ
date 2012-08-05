@@ -69,10 +69,14 @@ div.datetime span {color: #777777}
 #overview article h4 {margin: 0 0 10px 0; color: #333333}
 #overview article span {display: block;}
 #overview article span img {margin: 0 auto}
-#overview article li {margin-right: 20px}
+#overview article li {margin-right: 20px; margin-bottom: 0.5em;}
 #elements {float: right; width: 830px}
 .left {float: left; width: 410px}
 .right {float: right; width: 410px}
+#featurehighlights {
+	padding-left: 1.5em;
+}
+
 #tabs-5 
 
 #ifr {width: 540px; margin: 0 auto}
@@ -142,3 +146,4 @@ background: -ms-linear-gradient(top, rgba(109,179,242,1) 0%,rgba(30,105,222,1) 1
 background: linear-gradient(to bottom, rgba(109,179,242,1) 0%,rgba(30,105,222,1) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de',GradientType=0 ); /* IE6-9 */
 }
+
