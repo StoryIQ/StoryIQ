@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Blogging with Hindsight</title>
- <link href="http://hindsighttesting.com/blog/feed.xml" rel="self"/>
+ <link href="http://hindsighttesting.com/blog/community.xml" rel="self"/>
  <link href="http://hindsighttesting.com/"/>
  <updated>2012-10-18T10:08:34+01:00</updated>
  <id>http://hindsighttesting.com/blog</id>
@@ -11,43 +11,6 @@
    <email>mail@hindsighttesting.com</email>
  </author>
 
- 
- <entry>
-   <title>One day tutorial on Cucumber-JVM at jDays Gothenburg</title>
-   <link href="http://hindsighttesting.comblog/2012/10/08/jDays-GOTEBORG-Cucumber-JVM-Tutorial/"/>
-   <updated>2012-10-08T00:00:00+01:00</updated>
-   <id>http://recursive-design.comblog/2012/10/08/jDays-GOTEBORG-Cucumber-JVM-Tutorial</id>
-   <content type="html">&lt;p&gt;&lt;img style=&quot;float:left; padding-right: 1em; padding-bottom: 1em;&quot; src=&quot;/gallery/jDays_logo_RGB_speaker_emblem_pa1.png&quot;/&gt; Got the burning desire to learn Cucumber-JVM but don't know where to start? We are pleased to announce that we will be running a one day tutorial on “BDD with Cucumber-JVM” at jDays  Gothenburg on the 5th of December. The tutorial is free for all the attendees of jDays, a three day conference for Java professionals held at the Swedish Exhibition &amp;amp; Congress Centre, Gothenburg
-Sweden. Full details are available at the &lt;a href=&quot;http://www.jdays.se/course-information/&quot;&gt;jDays website&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The one day tutorial will give a strong foundation in Cucumber JVM, a rewrite of Cuke4Duke, the tool many Java developers use for writing and running BDD style acceptance tests. The main focus of this course will be on how to write automated acceptance tests for BDD scenarios, though there will be an introduction to BDD given for people not familiar with it.&lt;/p&gt;
-
-&lt;h3&gt;Topics covered:&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;BDD basics&lt;/li&gt;
-&lt;li&gt;Automating scenarios by writing Java glue code for Cucumber-JVM&lt;/li&gt;
-&lt;li&gt;How to run automated Scenarios using JUnit or Maven&lt;/li&gt;
-&lt;li&gt;Grouping scenarios and selecting what gets run with Tags&lt;/li&gt;
-&lt;li&gt;Writing common set-up and tear down code for automated scenario's using hooks (@Before and @After)&lt;/li&gt;
-&lt;/ul&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>Behave for JIRA wins "Best Marketplace paid add-on" in Codegeist 2012</title>
-   <link href="http://hindsighttesting.comblog/2012/07/30/acceptance-testing-wins-in-codegeist/"/>
-   <updated>2012-07-30T00:00:00+01:00</updated>
-   <id>http://recursive-design.comblog/2012/07/30/acceptance-testing-wins-in-codegeist</id>
-   <content type="html">&lt;p&gt;&lt;img style=&quot;float:right; padding-left: 1em;&quot; src=&quot;/gallery/codegeist2012_logo.png&quot;/&gt; In a record field of 94 high quality entries Behave for JIRA fought its way to win &quot;Best Marketplace-enabled Plugin&quot; in Atlassian's Codegiest 2012.
-Codegiest is annual competition held by Atlassian to find the best product extensions for JIRA, Confluence, GreenHopper, Bamboo, Stash, Bitbucket and the other Atlassian tools.&lt;/p&gt;
-
-&lt;p&gt;This was the 6th running of the annual competition and there were 94 entries, covering 6 different Atlassian products. Judging of the competition of done by Mike Cannon-Brookes (co-CEO of Atlassian), Don Brown and Jonathan Nolen. Contestants had 6 weeks from the announcement of the competition at Atlassian Summit to build their entries.&lt;/p&gt;
-
-&lt;p&gt;Get your full roundup of the Codegiest 2012 results at the &lt;a href=&quot;https://blogs.atlassian.com/2012/07/announcing-the-codegeist-2012-winners/&quot;&gt;Atlassian website&lt;/a&gt;&lt;/p&gt;
-</content>
- </entry>
  
  <entry>
    <title>A Slice of Pi with your Information Radiator</title>

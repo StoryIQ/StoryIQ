@@ -108,7 +108,7 @@ footer.page a {color: #333333; text-decoration: none;}
 .post-social {margin-top: 20px; float: right; width: 157px;}
 .post-social .label {color: #999999; font-size: 12px; display: block}
 .post-social h4 {margin: 0 0 10px 0}
-#solo-article {padding: 10px 0}
+#solo-article, #solo-page {padding: 10px 0}
 
 /* color gradients */
 #support a.left:hover {
@@ -149,5 +149,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', end
 
 #news article img {
 max-width: 175px;
+}
+
+#solo-page .post-wrap {
+ width:auto;
 }
 
