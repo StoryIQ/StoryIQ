@@ -4,13 +4,32 @@
  <title>Blogging with Hindsight</title>
  <link href="http://hindsighttesting.com/blog/feed.xml" rel="self"/>
  <link href="http://hindsighttesting.com/"/>
- <updated>2012-12-06T13:19:00+00:00</updated>
+ <updated>2012-12-10T15:00:03+00:00</updated>
  <id>http://hindsighttesting.com/blog</id>
  <author>
    <name>Hindsight Software Ltd</name>
    <email>mail@hindsighttesting.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Slides from jDays - Continuous Deployment Pipeline with Maven</title>
+   <link href="http://hindsighttesting.comblog/2012/12/10/jdays-goteborg-continuous-deployment-pipeline-with-maven/"/>
+   <updated>2012-12-10T00:00:00+00:00</updated>
+   <id>http://recursive-design.comblog/2012/12/10/jdays-goteborg-continuous-deployment-pipeline-with-maven</id>
+   <content type="html">&lt;p&gt;Last week I attended the &lt;a href=&quot;http://www.jdays.se/&quot;&gt;jDays Conference&lt;/a&gt; for Java Professionals and talked about building a &quot;Continuous Deployment Pipeline in Maven&quot;&lt;/p&gt;
+
+&lt;iframe src=&quot;http://www.slideshare.net/slideshow/embed_code/15569541&quot; width=&quot;597&quot; height=&quot;486&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px&quot; allowfullscreen webkitallowfullscreen mozallowfullscreen&gt; &lt;/iframe&gt;
+
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;div style=&quot;margin-bottom:5px&quot;&gt; &lt;strong&gt; &lt;a href=&quot;http://www.slideshare.net/alan_parkinson/continuous-deployment-pipeline-with-maven&quot; title=&quot;Continuous Deployment Pipeline with maven&quot; target=&quot;_blank&quot;&gt;Continuous Deployment Pipeline with maven&lt;/a&gt; &lt;/strong&gt; by &lt;strong&gt;&lt;a href=&quot;http://www.slideshare.net/alan_parkinson&quot; target=&quot;_blank&quot;&gt;Alan Parkinson&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;
+
+
+
+</content>
+ </entry>
  
  <entry>
    <title>Behave for JIRA Beta discount ending soon</title>
