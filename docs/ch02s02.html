@@ -1,8 +1,8 @@
 <html><head>
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-   <title>Running the Acceptance Test with Cucumber</title><link rel="stylesheet" href="css.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="manual.html" title="Behave for JIRA Documentation"><link rel="up" href="ch02.html" title="Chapter&nbsp;2.&nbsp;Quick Start Guide"><link rel="prev" href="ch02.html" title="Chapter&nbsp;2.&nbsp;Quick Start Guide"><link rel="next" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Using the specifications view to manage features and scenarios"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Running the Acceptance Test with Cucumber</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch02.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;2.&nbsp;Quick Start Guide</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ch03.html">Next</a></td></tr></table><hr></div><div class="section" title="Running the Acceptance Test with Cucumber"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e72"></a>Running the Acceptance Test with Cucumber</h2></div></div></div><p>We now have a JIRA issue with a single acceptance test scenario but no way of running it. This is about to change as we are going to add the "behave-maven-plugin" to generate our acceptance tests from our JIRA project. For this tutorial we are assuming you are using maven as your build tool. If you don't have a maven
+   <title>Running the Acceptance Test with Cucumber</title><link rel="stylesheet" href="css.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="manual.html" title="Behave for JIRA Documentation"><link rel="up" href="ch02.html" title="Chapter&nbsp;2.&nbsp;Quick Start Guide"><link rel="prev" href="ch02.html" title="Chapter&nbsp;2.&nbsp;Quick Start Guide"><link rel="next" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Using the specifications view to manage features and scenarios"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Running the Acceptance Test with Cucumber</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch02.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;2.&nbsp;Quick Start Guide</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ch03.html">Next</a></td></tr></table><hr></div><div class="section" title="Running the Acceptance Test with Cucumber"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e83"></a>Running the Acceptance Test with Cucumber</h2></div></div></div><p>We now have a JIRA issue with a single acceptance test scenario but no way of running it. This is about to change as we are going to add the "behave-maven-plugin" to generate our acceptance tests from our JIRA project. For this tutorial we are assuming you are using maven as your build tool. If you don't have a maven
 	  	project of your own you can <a class="ulink" href="https://bitbucket.org/hindsightsoftwareltd/behave-maven-quickstart" target="_top">download</a> a preconfigured maven project from bitbucket.
-	    </p><div class="section" title="Configuring Maven"><div class="titlepage"><div><div><h3 class="title"><a name="d0e80"></a>Configuring Maven</h3></div></div></div><p>The first step is to add the Hindsight Software Maven repository to your pom file.</p><pre class="programlisting">
+	    </p><div class="section" title="Configuring Maven"><div class="titlepage"><div><div><h3 class="title"><a name="d0e91"></a>Configuring Maven</h3></div></div></div><p>The first step is to add the Hindsight Software Maven repository to your pom file.</p><pre class="programlisting">
 &lt;pluginRepositories&gt;
     &lt;pluginRepository&gt;
         &lt;id&gt;hindsighttesting.release&lt;/id&gt;
@@ -16,7 +16,7 @@
 &lt;plugin&gt;
     &lt;groupId&gt;com.hindsighttesting.behave&lt;/groupId&gt;
     &lt;artifactId&gt;behave-maven-plugin&lt;/artifactId&gt;
-    &lt;version&gt;1.0.0-BETA6-47-8f3b895cde074b18e496ae71e09e0c349f69618c&lt;/version&gt;
+    &lt;version&gt;1.0.0-84-d947ee7fe3f80565588c7b67a73ee9ab58fb5339&lt;/version&gt;
     &lt;configuration&gt;
         &lt;server&gt;http://localhost:2990/jira&lt;/server&gt;
         &lt;projectKey&gt;DEMO&lt;/projectKey&gt;
@@ -31,7 +31,7 @@
         &lt;/execution&gt;
     &lt;/executions&gt;
 &lt;/plugin&gt;
-	  </pre></div><div class="section" title="Configuring Cucumber"><div class="titlepage"><div><div><h3 class="title"><a name="d0e91"></a>Configuring Cucumber</h3></div></div></div><p>The first step is to add the cucumber dependencies to the maven project. We will be using Cucumber's JUnit runner to run our tests so JUnit will also be a dependency.</p><pre class="programlisting">
+	  </pre></div><div class="section" title="Configuring Cucumber"><div class="titlepage"><div><div><h3 class="title"><a name="d0e102"></a>Configuring Cucumber</h3></div></div></div><p>The first step is to add the cucumber dependencies to the maven project. We will be using Cucumber's JUnit runner to run our tests so JUnit will also be a dependency.</p><pre class="programlisting">
 &lt;dependencies&gt;
 	...
     &lt;dependency&gt;
