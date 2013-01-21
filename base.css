@@ -70,7 +70,7 @@ div.datetime span {color: #777777}
 #overview article span {display: block;}
 #overview article span img {margin: 0 auto}
 #overview article li {margin-right: 20px; margin-bottom: 0.5em;}
-#elements {float: right; width: 830px}
+#elements, #contact {float: right; width: 830px}
 .left {float: left; width: 410px}
 .right {float: right; width: 410px}
 #featurehighlights {
@@ -153,5 +153,25 @@ max-width: 175px;
 
 #solo-page .post-wrap {
  width:auto;
+}
+
+#contact li {
+	clear: both;
+	width: 600px;
+	list-style-type: none;
+}
+
+#contact label, #contact input, #contact textarea {
+	float: left;
+	width: 200px;
+	margin-bottom: 0.5em;
+}
+
+#contact input, #contact textarea {
+	width: 300px;
+}
+
+#contact input.button {
+	width: auto;
 }
 
