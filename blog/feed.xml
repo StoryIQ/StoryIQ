@@ -4,7 +4,7 @@
  <title>Blogging with Hindsight</title>
  <link href="http://hindsighttesting.com/blog/feed.xml" rel="self"/>
  <link href="http://hindsighttesting.com/"/>
- <updated>2013-02-08T11:37:24+00:00</updated>
+ <updated>2013-02-08T12:05:53+00:00</updated>
  <id>http://hindsighttesting.com/blog</id>
  <author>
    <name>Hindsight Software Ltd</name>
@@ -17,7 +17,7 @@
    <link href="http://hindsighttesting.comblog/2013/01/21/Cross-browser-testing-user-interface-rendering/"/>
    <updated>2013-01-21T00:00:00+00:00</updated>
    <id>http://recursive-design.comblog/2013/01/21/Cross-browser-testing-user-interface-rendering</id>
-   <content type="html">&lt;p&gt;When it comes to front-end development with Behave for JIRA, I tend to favour Chrome as my web browser of choice but that does not allow me to escape from working with Internet Explorer. At Hindsight, we recognise Behave has to work across any number of browser and OS combinations, with the main challenges lying with Internet Explorer. Luckily IE6 is no longer a problem as Microsoft now considers it obsolete, according to &lt;a href=&quot;http://www.ie6countdown.com/&quot;&gt;IE6 countdown&lt;/a&gt;, its use is down to 0.9% in the UK and 0.4% in the US. That leaves us with Internet Explorer 7 and upwards to consider.&lt;/p&gt;
+   <content type="xhtml">&lt;p&gt;When it comes to front-end development with Behave for JIRA, I tend to favour Chrome as my web browser of choice but that does not allow me to escape from working with Internet Explorer. At Hindsight, we recognise Behave has to work across any number of browser and OS combinations, with the main challenges lying with Internet Explorer. Luckily IE6 is no longer a problem as Microsoft now considers it obsolete, according to &lt;a href=&quot;http://www.ie6countdown.com/&quot;&gt;IE6 countdown&lt;/a&gt;, its use is down to 0.9% in the UK and 0.4% in the US. That leaves us with Internet Explorer 7 and upwards to consider.&lt;/p&gt;
 
 &lt;h2&gt;Progressive Enhancement v. Graceful Degradation&lt;/h2&gt;
 
@@ -64,7 +64,7 @@
    <link href="http://hindsighttesting.comblog/2012/12/10/jdays-goteborg-continuous-deployment-pipeline-with-maven/"/>
    <updated>2012-12-10T00:00:00+00:00</updated>
    <id>http://recursive-design.comblog/2012/12/10/jdays-goteborg-continuous-deployment-pipeline-with-maven</id>
-   <content type="html">&lt;p&gt;Last week I attended the &lt;a href=&quot;http://www.jdays.se/&quot;&gt;jDays Conference&lt;/a&gt; for Java Professionals and talked about building a &quot;Continuous Deployment Pipeline in Maven&quot;&lt;/p&gt;
+   <content type="xhtml">&lt;p&gt;Last week I attended the &lt;a href=&quot;http://www.jdays.se/&quot;&gt;jDays Conference&lt;/a&gt; for Java Professionals and talked about building a &quot;Continuous Deployment Pipeline in Maven&quot;&lt;/p&gt;
 
 &lt;iframe src=&quot;http://www.slideshare.net/slideshow/embed_code/15569541&quot; width=&quot;597&quot; height=&quot;486&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px&quot; allowfullscreen webkitallowfullscreen mozallowfullscreen&gt; &lt;/iframe&gt;
 
@@ -83,7 +83,7 @@
    <link href="http://hindsighttesting.comblog/2012/11/19/PendingRelease/"/>
    <updated>2012-11-19T00:00:00+00:00</updated>
    <id>http://recursive-design.comblog/2012/11/19/PendingRelease</id>
-   <content type="html">&lt;p&gt;&lt;img style=&quot;float:left; padding-right: 1em; padding-bottom: 1em;&quot; src=&quot;/assets/behave-logo.png&quot;/&gt;&lt;/p&gt;
+   <content type="xhtml">&lt;p&gt;&lt;img style=&quot;float:left; padding-right: 1em; padding-bottom: 1em;&quot; src=&quot;/assets/behave-logo.png&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;It's hard to believe its only been 18 weeks since we released the first Beta version of Behave for JIRA.
 This period of time has featured some major milestones:&lt;/p&gt;
@@ -115,7 +115,7 @@ This period of time has featured some major milestones:&lt;/p&gt;
    <link href="http://hindsighttesting.comblog/2012/10/30/running-tests-in-parallel/"/>
    <updated>2012-10-30T00:00:00+00:00</updated>
    <id>http://recursive-design.comblog/2012/10/30/running-tests-in-parallel</id>
-   <content type="html">&lt;p&gt;Automated functional tests provide valuable feedback to developers by notifying them when they have completed or broken functionality. The value of these tests can be
+   <content type="xhtml">&lt;p&gt;Automated functional tests provide valuable feedback to developers by notifying them when they have completed or broken functionality. The value of these tests can be
 maximised by providing the test results in the shortest possible time. The reason being the problem is likely to be fresh in the developer's mind and quicker for them to fix.&lt;/p&gt;
 
 &lt;p&gt;A typical functional or UI test suite can take many hours to run because the tests can only be run sequentially. The main cause for the sequential tests is the dependence
@@ -233,7 +233,7 @@ following up with additional posts over the next 8 weeks to expand on this topic
    <link href="http://hindsighttesting.comblog/2012/10/08/jDays-GOTEBORG-Cucumber-JVM-Tutorial/"/>
    <updated>2012-10-08T00:00:00+01:00</updated>
    <id>http://recursive-design.comblog/2012/10/08/jDays-GOTEBORG-Cucumber-JVM-Tutorial</id>
-   <content type="html">&lt;p&gt;&lt;img style=&quot;float:left; padding-right: 1em; padding-bottom: 1em;&quot; src=&quot;/gallery/jDays_logo_RGB_speaker_emblem_pa1.png&quot;/&gt; Got the burning desire to learn Cucumber-JVM but don't know where to start? We are pleased to announce that we will be running a one day tutorial on “BDD with Cucumber-JVM” at jDays  Gothenburg on the 5th of December. The tutorial is free for all the attendees of jDays, a three day conference for Java professionals held at the Swedish Exhibition &amp;amp; Congress Centre, Gothenburg
+   <content type="xhtml">&lt;p&gt;&lt;img style=&quot;float:left; padding-right: 1em; padding-bottom: 1em;&quot; src=&quot;/gallery/jDays_logo_RGB_speaker_emblem_pa1.png&quot;/&gt; Got the burning desire to learn Cucumber-JVM but don't know where to start? We are pleased to announce that we will be running a one day tutorial on &quot;BDD with Cucumber-JVM&quot; at jDays  Gothenburg on the 5th of December. The tutorial is free for all the attendees of jDays, a three day conference for Java professionals held at the Swedish Exhibition &amp;amp; Congress Centre, Gothenburg
 Sweden. Full details are available at the &lt;a href=&quot;http://www.jdays.se/course-information/&quot;&gt;jDays website&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The one day tutorial will give a strong foundation in Cucumber JVM, a rewrite of Cuke4Duke, the tool many Java developers use for writing and running BDD style acceptance tests. The main focus of this course will be on how to write automated acceptance tests for BDD scenarios, though there will be an introduction to BDD given for people not familiar with it.&lt;/p&gt;
@@ -256,7 +256,7 @@ Sweden. Full details are available at the &lt;a href=&quot;http://www.jdays.se/c
    <link href="http://hindsighttesting.comblog/2012/07/30/acceptance-testing-wins-in-codegeist/"/>
    <updated>2012-07-30T00:00:00+01:00</updated>
    <id>http://recursive-design.comblog/2012/07/30/acceptance-testing-wins-in-codegeist</id>
-   <content type="html">&lt;p&gt;&lt;img style=&quot;float:right; padding-left: 1em;&quot; src=&quot;/gallery/codegeist2012_logo.png&quot;/&gt; In a record field of 94 high quality entries Behave for JIRA fought its way to win &quot;Best Marketplace-enabled Plugin&quot; in Atlassian's Codegiest 2012.
+   <content type="xhtml">&lt;p&gt;&lt;img style=&quot;float:right; padding-left: 1em;&quot; src=&quot;/gallery/codegeist2012_logo.png&quot;/&gt; In a record field of 94 high quality entries Behave for JIRA fought its way to win &quot;Best Marketplace-enabled Plugin&quot; in Atlassian's Codegiest 2012.
 Codegiest is annual competition held by Atlassian to find the best product extensions for JIRA, Confluence, GreenHopper, Bamboo, Stash, Bitbucket and the other Atlassian tools.&lt;/p&gt;
 
 &lt;p&gt;This was the 6th running of the annual competition and there were 94 entries, covering 6 different Atlassian products. Judging of the competition of done by Mike Cannon-Brookes (co-CEO of Atlassian), Don Brown and Jonathan Nolen. Contestants had 6 weeks from the announcement of the competition at Atlassian Summit to build their entries.&lt;/p&gt;
@@ -270,7 +270,7 @@ Codegiest is annual competition held by Atlassian to find the best product exten
    <link href="http://hindsighttesting.comblog/2012/06/01/raspberry-pi-jira-information-raditor/"/>
    <updated>2012-06-01T00:00:00+01:00</updated>
    <id>http://recursive-design.comblog/2012/06/01/raspberry-pi-jira-information-raditor</id>
-   <content type="html">&lt;p&gt;Most of you would of heard of the Raspberry Pi - a low powered credit card sized computer released in the last few months. After a wait I managed to get my hands on one of these nifty devices and have put one of my ideas into action: a power efficient information radiator.&lt;/p&gt;
+   <content type="xhtml">&lt;p&gt;Most of you would of heard of the Raspberry Pi - a low powered credit card sized computer released in the last few months. After a wait I managed to get my hands on one of these nifty devices and have put one of my ideas into action: a power efficient information radiator.&lt;/p&gt;
 
 &lt;p&gt;Information radiators are very useful visual tools that allow anyone at a glance to see the state of the project and receive feedback from important systems. Typically an old or spare PC is used to run a web browser rendering information to a large screen or TV displayed in the team's work area. JIRA has a handy Wallboard plugin that can turn any dashboard into a format to appear on a Information Radiator.&lt;/p&gt;
 
@@ -344,7 +344,7 @@ Codegiest is annual competition held by Atlassian to find the best product exten
    <link href="http://hindsighttesting.comblog/2012/05/18/automated-security-testing-selenium-zap/"/>
    <updated>2012-05-18T00:00:00+01:00</updated>
    <id>http://recursive-design.comblog/2012/05/18/automated-security-testing-selenium-zap</id>
-   <content type="html">&lt;p&gt;A few weeks ago I had the pleasure of speaking at the 2012 Selenium Conf in London. My presentation was on &quot;Automated Security Testing&quot; using Selenium and the Zed Attack Proxy. All the SeConf presentations have been recorded and I thought I would share my talk with you now it has been published.&lt;/p&gt;
+   <content type="xhtml">&lt;p&gt;A few weeks ago I had the pleasure of speaking at the 2012 Selenium Conf in London. My presentation was on &quot;Automated Security Testing&quot; using Selenium and the Zed Attack Proxy. All the SeConf presentations have been recorded and I thought I would share my talk with you now it has been published.&lt;/p&gt;
 
 &lt;object style=&quot;height: 460px; width: 760px&quot;&gt;&lt;param name=&quot;wmode&quot; value=&quot;transparent&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/aVFZFi_6B9g?version=3&amp;feature=player_detailpage&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;&gt;&lt;embed src=&quot;http://www.youtube.com/v/aVFZFi_6B9g?version=3&amp;feature=player_detailpage&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; allowScriptAccess=&quot;always&quot; width=&quot;760&quot; height=&quot;460&quot;&gt;&lt;/object&gt;
 

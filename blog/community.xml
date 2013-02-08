@@ -4,7 +4,7 @@
  <title>Blogging with Hindsight</title>
  <link href="http://hindsighttesting.com/blog/community.xml" rel="self"/>
  <link href="http://hindsighttesting.com/"/>
- <updated>2013-02-08T11:37:24+00:00</updated>
+ <updated>2013-02-08T12:05:53+00:00</updated>
  <id>http://hindsighttesting.com/blog</id>
  <author>
    <name>Hindsight Software Ltd</name>
@@ -17,7 +17,7 @@
    <link href="http://hindsighttesting.comblog/2013/01/21/Cross-browser-testing-user-interface-rendering/"/>
    <updated>2013-01-21T00:00:00+00:00</updated>
    <id>http://recursive-design.comblog/2013/01/21/Cross-browser-testing-user-interface-rendering</id>
-   <content type="html">&lt;p&gt;When it comes to front-end development with Behave for JIRA, I tend to favour Chrome as my web browser of choice but that does not allow me to escape from working with Internet Explorer. At Hindsight, we recognise Behave has to work across any number of browser and OS combinations, with the main challenges lying with Internet Explorer. Luckily IE6 is no longer a problem as Microsoft now considers it obsolete, according to &lt;a href=&quot;http://www.ie6countdown.com/&quot;&gt;IE6 countdown&lt;/a&gt;, its use is down to 0.9% in the UK and 0.4% in the US. That leaves us with Internet Explorer 7 and upwards to consider.&lt;/p&gt;
+   <content type="xhtml">&lt;p&gt;When it comes to front-end development with Behave for JIRA, I tend to favour Chrome as my web browser of choice but that does not allow me to escape from working with Internet Explorer. At Hindsight, we recognise Behave has to work across any number of browser and OS combinations, with the main challenges lying with Internet Explorer. Luckily IE6 is no longer a problem as Microsoft now considers it obsolete, according to &lt;a href=&quot;http://www.ie6countdown.com/&quot;&gt;IE6 countdown&lt;/a&gt;, its use is down to 0.9% in the UK and 0.4% in the US. That leaves us with Internet Explorer 7 and upwards to consider.&lt;/p&gt;
 
 &lt;h2&gt;Progressive Enhancement v. Graceful Degradation&lt;/h2&gt;
 
@@ -64,7 +64,7 @@
    <link href="http://hindsighttesting.comblog/2012/12/10/jdays-goteborg-continuous-deployment-pipeline-with-maven/"/>
    <updated>2012-12-10T00:00:00+00:00</updated>
    <id>http://recursive-design.comblog/2012/12/10/jdays-goteborg-continuous-deployment-pipeline-with-maven</id>
-   <content type="html">&lt;p&gt;Last week I attended the &lt;a href=&quot;http://www.jdays.se/&quot;&gt;jDays Conference&lt;/a&gt; for Java Professionals and talked about building a &quot;Continuous Deployment Pipeline in Maven&quot;&lt;/p&gt;
+   <content type="xhtml">&lt;p&gt;Last week I attended the &lt;a href=&quot;http://www.jdays.se/&quot;&gt;jDays Conference&lt;/a&gt; for Java Professionals and talked about building a &quot;Continuous Deployment Pipeline in Maven&quot;&lt;/p&gt;
 
 &lt;iframe src=&quot;http://www.slideshare.net/slideshow/embed_code/15569541&quot; width=&quot;597&quot; height=&quot;486&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px&quot; allowfullscreen webkitallowfullscreen mozallowfullscreen&gt; &lt;/iframe&gt;
 
@@ -83,7 +83,7 @@
    <link href="http://hindsighttesting.comblog/2012/06/01/raspberry-pi-jira-information-raditor/"/>
    <updated>2012-06-01T00:00:00+01:00</updated>
    <id>http://recursive-design.comblog/2012/06/01/raspberry-pi-jira-information-raditor</id>
-   <content type="html">&lt;p&gt;Most of you would of heard of the Raspberry Pi - a low powered credit card sized computer released in the last few months. After a wait I managed to get my hands on one of these nifty devices and have put one of my ideas into action: a power efficient information radiator.&lt;/p&gt;
+   <content type="xhtml">&lt;p&gt;Most of you would of heard of the Raspberry Pi - a low powered credit card sized computer released in the last few months. After a wait I managed to get my hands on one of these nifty devices and have put one of my ideas into action: a power efficient information radiator.&lt;/p&gt;
 
 &lt;p&gt;Information radiators are very useful visual tools that allow anyone at a glance to see the state of the project and receive feedback from important systems. Typically an old or spare PC is used to run a web browser rendering information to a large screen or TV displayed in the team's work area. JIRA has a handy Wallboard plugin that can turn any dashboard into a format to appear on a Information Radiator.&lt;/p&gt;
 
@@ -157,7 +157,7 @@
    <link href="http://hindsighttesting.comblog/2012/05/18/automated-security-testing-selenium-zap/"/>
    <updated>2012-05-18T00:00:00+01:00</updated>
    <id>http://recursive-design.comblog/2012/05/18/automated-security-testing-selenium-zap</id>
-   <content type="html">&lt;p&gt;A few weeks ago I had the pleasure of speaking at the 2012 Selenium Conf in London. My presentation was on &quot;Automated Security Testing&quot; using Selenium and the Zed Attack Proxy. All the SeConf presentations have been recorded and I thought I would share my talk with you now it has been published.&lt;/p&gt;
+   <content type="xhtml">&lt;p&gt;A few weeks ago I had the pleasure of speaking at the 2012 Selenium Conf in London. My presentation was on &quot;Automated Security Testing&quot; using Selenium and the Zed Attack Proxy. All the SeConf presentations have been recorded and I thought I would share my talk with you now it has been published.&lt;/p&gt;
 
 &lt;object style=&quot;height: 460px; width: 760px&quot;&gt;&lt;param name=&quot;wmode&quot; value=&quot;transparent&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/aVFZFi_6B9g?version=3&amp;feature=player_detailpage&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;&gt;&lt;embed src=&quot;http://www.youtube.com/v/aVFZFi_6B9g?version=3&amp;feature=player_detailpage&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; allowScriptAccess=&quot;always&quot; width=&quot;760&quot; height=&quot;460&quot;&gt;&lt;/object&gt;
 
