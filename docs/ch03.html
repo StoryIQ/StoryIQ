@@ -1,0 +1,24 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;3.&nbsp;Using the specifications view to manage features and scenarios</title><link rel="stylesheet" href="css.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="manual.html" title="Behave for JIRA Documentation"><link rel="up" href="manual.html" title="Behave for JIRA Documentation"><link rel="prev" href="ch02s02.html" title="Running the Acceptance Test with Cucumber"><link rel="next" href="ch04.html" title="Chapter&nbsp;4.&nbsp;Testing specifications with Cucumber"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter&nbsp;3.&nbsp;Using the specifications view to manage features and scenarios</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch02s02.html">Prev</a>&nbsp;</td><th width="60%" align="center">&nbsp;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ch04.html">Next</a></td></tr></table><hr></div><div class="chapter" title="Chapter&nbsp;3.&nbsp;Using the specifications view to manage features and scenarios"><div class="titlepage"><div><div><h2 class="title"><a name="d0e125"></a>Chapter&nbsp;3.&nbsp;Using the specifications view to manage features and scenarios</h2></div></div></div><p>
+      You can manage the features and scenarios for all projects in your JIRA instance from the specifications view. The button to take you there
+      is located on the JIRA toolbar next to Issues.
+  	</p><div class="screenshot"><div><img src="images/specLink.png"></div></div><p>
+      The specifications page is laid out to update from left to right. Select your project from the column on the left and all features associated
+      with that project will be displayed in the middle column. Since there are no features in this project yet, click "Add Feature" at the top of the
+      features column to create a new one. This will open an inline edit box - enter "Help users write search queries" and hit return to add it to the
+      project.
+    </p><div class="screenshot"><div><img src="images/specNewFeature.png"></div></div><p>
+      The controls to the right of the newly created feature let you edit the feature and provide further details, or delete the feature. This functionality
+      is the same for when working with scenarios. Click the edit pencil button to open the editor for the feature.
+    </p><div class="screenshot"><div><img src="images/specEditFeature.png"></div></div><p>
+      Once you have made your changes to the feature, click the green tick to commit them or the red cross to cancel them.
+    </p><div class="screenshot"><div><img src="images/specDescribeFeature.png"></div></div><p>
+      With the feature selected, add a new scenario by clicking the "Add Scenario" button at the top of the scenarios column. A scenario describes a particular
+      use case for the feature, and is what is linked to issues in JIRA to provide acceptance criteria so you know when you have the code you want. Once you have
+      created and named your scenario, click the edit pencil button to begin editing steps. The language used to describe steps is Gherkin, which follows a very
+      simple "Given, When, Then" format. This allows all stakeholders to understand what is going on, and clarifies the functionality for the developers.
+    </p><div class="screenshot"><div><img src="images/specEditSteps.png"></div></div><p>
+      Once you have created the scenarios to flesh out use cases for your feature, you can add them to JIRA issues so that they generate acceptance criteria to be run
+      with Cucumber. See the previous section for information on linking scenarios to issues.
+    </p></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch02s02.html">Prev</a>&nbsp;</td><td width="20%" align="center">&nbsp;</td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ch04.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Running the Acceptance Test with Cucumber&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="manual.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;4.&nbsp;Testing specifications with Cucumber</td></tr></table></div></body></html>

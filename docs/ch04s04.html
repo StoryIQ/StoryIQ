@@ -1,0 +1,46 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>.NET</title><link rel="stylesheet" href="css.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="manual.html" title="Behave for JIRA Documentation"><link rel="up" href="ch04.html" title="Chapter&nbsp;4.&nbsp;Testing specifications with Cucumber"><link rel="prev" href="ch04s03.html" title="Python"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">.NET</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch04s03.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;4.&nbsp;Testing specifications with Cucumber</th><td width="20%" align="right">&nbsp;</td></tr></table><hr></div><div class="section" title=".NET"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e288"></a>.NET</h2></div></div></div><p>This chapter will demonstrate installing the .NET package for Behave, and using it from within your .NET scripts</p><div class="section" title="Installing the Hindsight package"><div class="titlepage"><div><div><h3 class="title"><a name="d0e293"></a>Installing the Hindsight package</h3></div></div></div><p>
+                  The package is hosted on NuGet (<a class="ulink" href="http://nuget.org/packages/Hindsight.Behave" target="_top">http://nuget.org/packages/Hindsight.Behave</a>) and is available through NuGet Packet Manager shell.
+                  </p><pre class="programlisting">PM&gt; Install-Package Hindsight.Behave</pre><p>
+                  This will install the Behave package in your project. Alternatively, use the built in NuGet Gallery interface from inside Visual Studio 2010/12.
+              </p></div><div class="section" title="Using within a script"><div class="titlepage"><div><div><h3 class="title"><a name="d0e304"></a>Using within a script</h3></div></div></div><p>
+                  You can use the Jira Connector within your own scripts to download features from Behave
+                  </p><pre class="programlisting">
+Using Hindsight.Behave;
+
+public class Demo
+{
+    public void Download()
+    {
+        JiraConnector jc = new JiraConnector("http://localhost:2990");
+        jc.Fetch(project: "PROJ", username: "behaver", password: "atdd4me", directory: "features", manual: true)
+    }
+}</pre><p>
+                  This will download all features from PROJ at http://localhost:2990 into the features directory, including manual tagged scenarios.
+                  The only required argument is project, the rest are optional.
+              </p></div><div class="section" title="Using with MSBuild"><div class="titlepage"><div><div><h3 class="title"><a name="d0e312"></a>Using with MSBuild</h3></div></div></div><p>
+                  You can use the Behave assembly as an MSBuild task as part of your build process. You can modify the build process for a project by
+                  "unloading" it in Visual Studio (right click the project in the solution explorer and click "Unload Project") and then right clicking and
+                  clicking "Edit [PROJECT].csproj", or editing the .csproj file directly in the directory for the project.
+              </p><p>
+                  Create a new reference to the Behave.dll assembly, which will be in your project after using NuGet to install it:
+                  </p><pre class="programlisting">
+&lt;UsingTask
+    TaskName="Behave"
+    AssemblyFile="path\to\the\Behave.dll" /&gt;</pre><p>
+              </p><p>
+                  You can then use the Behave task to fetch features, either in one of the existing BeforeBuild or AfterBuild target blocks, or by defining your
+                  own as we have below:
+                  </p><pre class="programlisting">
+&lt;Target Name="Test"&gt;
+    &lt;Behave
+        host="http://localhost:2990",
+        project="PROJ",
+        username="behaver",
+        password="atdd4me",
+        directory="Features\",
+        manual="true"
+&lt;/Target&gt;</pre><p>
+                  This will download the feature files as part of the build process
+              </p></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch04s03.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ch04.html">Up</a></td><td width="40%" align="right">&nbsp;</td></tr><tr><td width="40%" align="left" valign="top">Python&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="manual.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;</td></tr></table></div></body></html>

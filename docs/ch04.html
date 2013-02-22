@@ -1,0 +1,90 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;4.&nbsp;Testing specifications with Cucumber</title><link rel="stylesheet" href="css.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="manual.html" title="Behave for JIRA Documentation"><link rel="up" href="manual.html" title="Behave for JIRA Documentation"><link rel="prev" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Using the specifications view to manage features and scenarios"><link rel="next" href="ch04s02.html" title="Ruby"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter&nbsp;4.&nbsp;Testing specifications with Cucumber</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch03.html">Prev</a>&nbsp;</td><th width="60%" align="center">&nbsp;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ch04s02.html">Next</a></td></tr></table><hr></div><div class="chapter" title="Chapter&nbsp;4.&nbsp;Testing specifications with Cucumber"><div class="titlepage"><div><div><h2 class="title"><a name="d0e150"></a>Chapter&nbsp;4.&nbsp;Testing specifications with Cucumber</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="ch04.html#d0e153">Java: Cucumber-JVM and Maven</a></span></dt><dd><dl><dt><span class="section"><a href="ch04.html#d0e156">Configuring Maven</a></span></dt><dt><span class="section"><a href="ch04.html#d0e167">Configuring Cucumber</a></span></dt></dl></dd><dt><span class="section"><a href="ch04s02.html">Ruby</a></span></dt><dd><dl><dt><span class="section"><a href="ch04s02.html#d0e195">Installing the Behave gem</a></span></dt><dt><span class="section"><a href="ch04s02.html#d0e206">Using from the command line</a></span></dt><dt><span class="section"><a href="ch04s02.html#d0e221">Rake</a></span></dt></dl></dd><dt><span class="section"><a href="ch04s03.html">Python</a></span></dt><dd><dl><dt><span class="section"><a href="ch04s03.html#d0e259">Installing the Hindsight package</a></span></dt><dt><span class="section"><a href="ch04s03.html#d0e270">Using from the command line</a></span></dt><dt><span class="section"><a href="ch04s03.html#d0e280">Using within a script</a></span></dt></dl></dd><dt><span class="section"><a href="ch04s04.html">.NET</a></span></dt><dd><dl><dt><span class="section"><a href="ch04s04.html#d0e293">Installing the Hindsight package</a></span></dt><dt><span class="section"><a href="ch04s04.html#d0e304">Using within a script</a></span></dt><dt><span class="section"><a href="ch04s04.html#d0e312">Using with MSBuild</a></span></dt></dl></dd></dl></div><div class="section" title="Java: Cucumber-JVM and Maven"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e153"></a>Java: Cucumber-JVM and Maven</h2></div></div></div><div class="section" title="Configuring Maven"><div class="titlepage"><div><div><h3 class="title"><a name="d0e156"></a>Configuring Maven</h3></div></div></div><p>The first step is to add the Hindsight Software Maven repository to your pom file.</p><pre class="programlisting">
+&lt;pluginRepositories&gt;
+    &lt;pluginRepository&gt;
+        &lt;id&gt;hindsighttesting.release&lt;/id&gt;
+        &lt;name&gt;Hindsight Software Release Repository&lt;/name&gt;
+        &lt;url&gt;http://hindsighttesting.artifactoryonline.com/hindsighttesting/libs-releases&lt;/url&gt;
+    &lt;/pluginRepository&gt;
+&lt;/pluginRepositories&gt;
+		</pre><p>
+		  Next, the plugin declaration can be added to the pom file. The plugin has two required parameters: "server" which is the url of your JIRA instance and "projectKey" which is the key of the
+		  project you want to generate acceptance tests for. If your JIRA instance requires you to login you can specify a valid username and password for the plugin to use with the "username" and "password" parameters.</p><pre class="programlisting">
+&lt;plugin&gt;
+    &lt;groupId&gt;com.hindsighttesting.behave&lt;/groupId&gt;
+    &lt;artifactId&gt;behave-maven-plugin&lt;/artifactId&gt;
+    &lt;version&gt;1.1.0-SNAPSHOT&lt;/version&gt;
+    &lt;configuration&gt;
+        &lt;server&gt;http://localhost:2990/jira&lt;/server&gt;
+        &lt;projectKey&gt;DEMO&lt;/projectKey&gt;
+        &lt;username&gt;admin&lt;/username&gt;
+        &lt;password&gt;admin&lt;/password&gt;
+    &lt;/configuration&gt;
+    &lt;executions&gt;
+        &lt;execution&gt;
+            &lt;goals&gt;
+                &lt;goal&gt;features&lt;/goal&gt;
+            &lt;/goals&gt;
+        &lt;/execution&gt;
+    &lt;/executions&gt;
+&lt;/plugin&gt;
+	  </pre></div><div class="section" title="Configuring Cucumber"><div class="titlepage"><div><div><h3 class="title"><a name="d0e167"></a>Configuring Cucumber</h3></div></div></div><p>The first step is to add the cucumber dependencies to the maven project. We will be using Cucumber's JUnit runner to run our tests so JUnit will also be a dependency.</p><pre class="programlisting">
+&lt;dependencies&gt;
+	...
+    &lt;dependency&gt;
+        &lt;groupId&gt;info.cukes&lt;/groupId&gt;
+        &lt;artifactId&gt;cucumber-picocontainer&lt;/artifactId&gt;
+        &lt;version&gt;1.0.10&lt;/version&gt;
+        &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.picocontainer&lt;/groupId&gt;
+        &lt;artifactId&gt;picocontainer&lt;/artifactId&gt;
+        &lt;version&gt;2.14.1&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;info.cukes&lt;/groupId&gt;
+        &lt;artifactId&gt;cucumber-junit&lt;/artifactId&gt;
+        &lt;version&gt;1.0.10&lt;/version&gt;
+        &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;junit&lt;/groupId&gt;
+        &lt;artifactId&gt;junit&lt;/artifactId&gt;
+        &lt;version&gt;4.10&lt;/version&gt;
+        &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+	...
+&lt;/dependencies&gt;	  
+		</pre><p>Create a java class called "CucumberIT" in the "src/test/java" folder of your maven project. Annotate this class with the following annotations.</p><pre class="programlisting">
+import org.junit.runner.RunWith;
+import cucumber.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+@Cucumber.Options(format = { "json", "json:target/cucumber.json" }, features = { "." }, strict = true)
+public class CucumberIT {
+
+}	  
+		</pre><p>
+		These annotations turn a standard JUnit test into a cucumber test which loads and executes the scenarios from JIRA (The behave-maven-plugin generates these).
+		To run this JUnit/Cucumber test during the Maven integration-test phase you need to add the maven failsafe plugin
+		</p><pre class="programlisting">
+&lt;plugin&gt;
+    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;maven-failsafe-plugin&lt;/artifactId&gt;
+    &lt;version&gt;2.12&lt;/version&gt;                
+    &lt;executions&gt;
+        &lt;execution&gt;
+            &lt;id&gt;integration-test&lt;/id&gt;
+            &lt;goals&gt;
+                &lt;goal&gt;integration-test&lt;/goal&gt;
+                &lt;goal&gt;verify&lt;/goal&gt;
+            &lt;/goals&gt;
+        &lt;/execution&gt;
+    &lt;/executions&gt;
+&lt;/plugin&gt;
+		</pre><p>When you put this all together and run it using "mvn verify" the acceptance tests are extracted from JIRA and run by cucumber. From the output of Maven you can see the tests failed. They failed because 
+		Cucumber is trying to match each step in your Scenario with a method in Java and could find any matches. If it finds a matching method it will execute it or it fails the scenario (Test) and skip over the remaining steps in the scenario.
+		All that is left to do is implement the cucumber step definitions</p><div class="screenshot"><div><img src="images/testFailure.png"></div></div><p>When Cucumber can't find a matching method to a step it will generate a code snippet for you to copy into your code and implement. In the console before the test results you will see code snippets for all the steps.
+		All that is left to do is implement the cucumber step definitions by creating a new Java class in our project and copy 'n' paste the snippets</p><div class="screenshot"><div><img src="images/codeSnippets.png"></div></div></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch03.html">Prev</a>&nbsp;</td><td width="20%" align="center">&nbsp;</td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ch04s02.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter&nbsp;3.&nbsp;Using the specifications view to manage features and scenarios&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="manual.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Ruby</td></tr></table></div></body></html>
