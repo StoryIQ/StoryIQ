@@ -4,13 +4,124 @@
  <title>Blogging with Hindsight</title>
  <link href="http://hindsighttesting.com/blog/feed.xml" rel="self"/>
  <link href="http://hindsighttesting.com/"/>
- <updated>2013-03-25T08:31:16+00:00</updated>
+ <updated>2013-04-02T11:24:46+01:00</updated>
  <id>http://hindsighttesting.com/blog</id>
  <author>
    <name>Hindsight Software Ltd</name>
    <email>mail@hindsighttesting.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Concurrent test execution Part 2 - Moving on from batched based concurrency to Multithreading</title>
+   <link href="http://hindsighttesting.comblog/2013/03/30/running-tests-concurrently-part2/"/>
+   <updated>2013-03-30T00:00:00+00:00</updated>
+   <id>http://recursive-design.comblog/2013/03/30/running-tests-concurrently-part2</id>
+   <content type="xhtml">&lt;p&gt;&lt;img src=&quot;/gallery/batched-test-jobs-feedback-timegraph1.png&quot; style=&quot;float: left; padding: 1em;&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Whilst the divide and conquer strategy of grouping tests into batches for concurrent execution is a simple method of speeding up test suites, it’s not perfect. The better solution would be to execute tests concurrently using multiple threads and take advantage of the multiple core’s available in modern processors.&lt;/p&gt;
+
+&lt;p&gt;In &lt;a href=&quot;/blog/2012/10/30/running-tests-in-parallel/&quot;&gt;part 1&lt;/a&gt; of this series on concurrent test execution I went into detail on how to break test suites into batches and run each batch on separate machines. This is easy to achieve using spare hardware, Virtual Machines or Cloud computing resources. This happens to be the simplest technique for concurrent test execution as it doesn’t require any additional code, but being simple is not always best.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gallery/batched-test-jobs-feedback-timegraph2.png&quot; style=&quot;float: right; padding: 1em;&quot;/&gt;&lt;/p&gt;
+
+&lt;h2&gt;Batch size&lt;/h2&gt;
+
+&lt;p&gt;Selecting tests for each batch is a manual process and estimates on execution time have to be made if each batch is to be of an even size.  The number of tests in the batch group, individual execution time, and the variation in performance of the underlying hardware will all affect the total execution time of each test batch. If all test batches were triggered at the same time, you would have to wait until the longest running test batch finishes before receiving for your results.&lt;/p&gt;
+
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;CI Scheduling&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gallery/batched-test-jobs-feedback-timegraph3.png&quot; style=&quot;float: left; padding: 1em;&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;To avoid additional coding, each batch group is executed in it's own CI job to leverage the scheduling and resource capabilities of CI systems.
+This can represent another delay to receiving test results as the jobs are bound to the available resources (Build Slaves/Agents) and scheduling
+ rules of the CI server. In most CI systems you would have more than one project and many committers triggering jobs. This means your test batches
+ might have to wait before they are scheduled to run, and they won’t all start at the same time.&lt;/p&gt;
+
+&lt;p&gt;Tip: Don’t create more test batches than the number of available build slaves or agents. On CI systems with high resource contention (long wait
+before jobs are scheduled to run) it's wise to have fewer test batches than build slaves to avoid likely contention.&lt;/p&gt;
+
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;How about going multi-threaded?&lt;/h2&gt;
+
+&lt;p&gt;You are probably aware that over the last 3 years the majority of unit test runners have added the option for executing tests in parallel using threading.
+ This feature is a great way to take advantage of the multiple cores available in modern processors for true concurrent test execution. If you are
+ investing in your test suite for the long term I highly recommend going for true parallel test execution using threading over the batched test method.&lt;/p&gt;
+
+&lt;h3&gt;Configuring Maven and JUnit for parallel test execution&lt;/h3&gt;
+
+&lt;p&gt;Parallel Test execution with Maven and JUnit requires a JUnit version 4.7 or greater. Those of you already familiar with the Maven Surefire plugin may
+know it can dynamically detect your JUnit version and enable and disable features based on the JUnit version. In theory by including the JUnit 4.7+
+dependency in your Maven project the parallel test configuration options should be enabled, however if another dependency in your project includes an older
+version of JUnit it may use this version. Luckily it's rather simple to tell Surefire which JUnit version to support by specifying a dependency of the
+Surefire plugin. For JUnit 4.7+ you need to use “surefire-junit47”&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;plugins&amp;gt;
+    ...
+    &amp;lt;plugin&amp;gt;
+        &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;maven-surefire-plugin&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;2.14&amp;lt;/version&amp;gt;
+        &amp;lt;dependencies&amp;gt;
+            &amp;lt;dependency&amp;gt;
+                &amp;lt;groupId&amp;gt;org.apache.maven.surefire&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;surefire-junit47&amp;lt;/artifactId&amp;gt;
+                &amp;lt;version&amp;gt;2.14&amp;lt;/version&amp;gt;
+                &amp;lt;/dependency&amp;gt;
+        &amp;lt;/dependencies&amp;gt;
+    &amp;lt;/plugin&amp;gt;
+    ...
+&amp;lt;/plugins&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Enabling parallel execution&lt;/h3&gt;
+
+&lt;p&gt;Once the correct version of JUnit has been configured it's a simple case of adding the &quot;parallel&quot; parameter to the Surfire plugin configuration
+ and we have a basic parallel execution configuration. The &quot;parallel&quot; parameter can have one of three values; &quot;methods&quot;, &quot;classes&quot;, or &quot;both&quot;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;plugins&amp;gt;
+    ...
+    &amp;lt;plugin&amp;gt;
+        &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;maven-surefire-plugin&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;2.14&amp;lt;/version&amp;gt;
+        ...
+        &amp;lt;configuration&amp;gt;
+            &amp;lt;parallel&amp;gt;methods&amp;lt;/parallel&amp;gt;
+        &amp;lt;/configuration&amp;gt;
+    &amp;lt;/plugin&amp;gt;
+    ...
+&amp;lt;/plugins&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;By default Surefire will create a test execution thread for each available core on the machine executing the tests. This default is satisfactory
+in many situations and can be overridden by the “perCoreThreadCount” and “threadCount” parameters.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;configuration&amp;gt;
+    &amp;lt;parallel&amp;gt;methods&amp;lt;/parallel&amp;gt;
+    &amp;lt;perCoreThreadCount&amp;gt;false&amp;lt;/perCoreThreadCounts&amp;gt;
+    &amp;lt;threadCount&amp;gt;2&amp;lt;/threadCount&amp;gt;
+&amp;lt;/configuration&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Considerations&lt;/h2&gt;
+
+&lt;p&gt;Before you dive straight into configuring Maven and JUnit for parallel test execution you need to consider if the test suite is ready for it.  It might not be straight forward to switch test suites straight over without consequences&lt;/p&gt;
+
+&lt;p&gt;The most significant consideration is around your tests being atomic and isolated from each other. This means the results or side effects from previous tests does not affect the execution and result of the current test. A good example of this is stale test data left over from a previous test; the previous test may have deleted or modified data the current depends on. This error may have gone unnoticed due to different test execution ordering in the past.&lt;/p&gt;
+
+&lt;p&gt;One common technique for ensuring test isolation is to setup the System Under Test (SUT) with known clean data before each individual test is executed. People typically do this by using SQL scripts to clean and insert a small amount of data in to the database. With concurrent test execution you will have a problem with this technique due to a race condition in accessing and cleaning the database.  You might be in the middle of executing test 1, and test 2 starts executing and cleaning the database.&lt;/p&gt;
+
+&lt;p&gt;My solution to this problem is to create unique non-repeatable test data on demand (before each test executes). As the data is unique and non-repeatable,  this provides our tests with isolation from each other and avoids having to clean out data from other tests.&lt;/p&gt;
+
+&lt;p&gt;I will be discussing this solution over several blogs in the future, so keep an eye out for them.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>We are attending TestBash 2013</title>
