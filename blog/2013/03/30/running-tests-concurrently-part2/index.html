@@ -39,9 +39,9 @@
 				
 				<p><img src="/gallery/batched-test-jobs-feedback-timegraph1.png" style="float: left; padding: 1em;"/></p>
 
-<p>Whilst the divide and conquer strategy of grouping tests into batches for concurrent execution is a simple method of speeding up test suites, it’s not perfect. The better solution would be to execute tests concurrently using multiple threads and take advantage of the multiple core’s available in modern processors.</p>
+<p>Whilst the divide and conquer strategy of grouping tests into batches for concurrent execution is a simple method of speeding up test suites, it's not perfect. The better solution would be to execute tests concurrently using multiple threads and take advantage of the multiple core's available in modern processors.</p>
 
-<p>In <a href="/blog/2012/10/30/running-tests-in-parallel/">part 1</a> of this series on concurrent test execution I went into detail on how to break test suites into batches and run each batch on separate machines. This is easy to achieve using spare hardware, Virtual Machines or Cloud computing resources. This happens to be the simplest technique for concurrent test execution as it doesn’t require any additional code, but being simple is not always best.</p>
+<p>In <a href="/blog/2012/10/30/running-tests-in-parallel/">part 1</a> of this series on concurrent test execution I went into detail on how to break test suites into batches and run each batch on separate machines. This is easy to achieve using spare hardware, Virtual Machines or Cloud computing resources. This happens to be the simplest technique for concurrent test execution as it doesn't require any additional code, but being simple is not always best.</p>
 
 <p><img src="/gallery/batched-test-jobs-feedback-timegraph2.png" style="float: right; padding: 1em;"/></p>
 
@@ -59,9 +59,9 @@
 <p>To avoid additional coding, each batch group is executed in it's own CI job to leverage the scheduling and resource capabilities of CI systems.
 This can represent another delay to receiving test results as the jobs are bound to the available resources (Build Slaves/Agents) and scheduling
  rules of the CI server. In most CI systems you would have more than one project and many committers triggering jobs. This means your test batches
- might have to wait before they are scheduled to run, and they won’t all start at the same time.</p>
+ might have to wait before they are scheduled to run, and they won't all start at the same time.</p>
 
-<p>Tip: Don’t create more test batches than the number of available build slaves or agents. On CI systems with high resource contention (long wait
+<p>Tip: Don't create more test batches than the number of available build slaves or agents. On CI systems with high resource contention (long wait
 before jobs are scheduled to run) it's wise to have fewer test batches than build slaves to avoid likely contention.</p>
 
 <div class="clear"></div>
@@ -79,7 +79,7 @@ before jobs are scheduled to run) it's wise to have fewer test batches than buil
 know it can dynamically detect your JUnit version and enable and disable features based on the JUnit version. In theory by including the JUnit 4.7+
 dependency in your Maven project the parallel test configuration options should be enabled, however if another dependency in your project includes an older
 version of JUnit it may use this version. Luckily it's rather simple to tell Surefire which JUnit version to support by specifying a dependency of the
-Surefire plugin. For JUnit 4.7+ you need to use “surefire-junit47”</p>
+Surefire plugin. For JUnit 4.7+ you need to use "surefire-junit47"</p>
 
 <pre><code>&lt;plugins&gt;
     ...
@@ -120,7 +120,7 @@ Surefire plugin. For JUnit 4.7+ you need to use “surefire-junit47”</p>
 </code></pre>
 
 <p>By default Surefire will create a test execution thread for each available core on the machine executing the tests. This default is satisfactory
-in many situations and can be overridden by the “perCoreThreadCount” and “threadCount” parameters.</p>
+in many situations and can be overridden by the "perCoreThreadCount" and "threadCount" parameters.</p>
 
 <pre><code>&lt;configuration&gt;
     &lt;parallel&gt;methods&lt;/parallel&gt;
@@ -165,6 +165,7 @@ in many situations and can be overridden by the “perCoreThreadCount” and “thread
 		<div class="clear"></div>
 	</div>
 </article>
+
 </div> <!-- end buffer -->
 <footer class="page">
 	<div class="cen">

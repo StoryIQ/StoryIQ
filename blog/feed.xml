@@ -4,7 +4,7 @@
  <title>Blogging with Hindsight</title>
  <link href="http://hindsighttesting.com/blog/feed.xml" rel="self"/>
  <link href="http://hindsighttesting.com/"/>
- <updated>2013-04-13T16:05:28+01:00</updated>
+ <updated>2013-07-01T18:28:35+01:00</updated>
  <id>http://hindsighttesting.com/blog</id>
  <author>
    <name>Hindsight Software Ltd</name>
@@ -13,25 +13,48 @@
 
  
  <entry>
+   <title>Storyflow for Stash wins "Best Stash add-on" at Atlassian Codegeist 2013</title>
+   <link href="http://hindsighttesting.com/blog/2013/06/30/best-stash-addon-codegeist/"/>
+   <updated>2013-06-30T00:00:00+01:00</updated>
+   <id>http://recursive-design.com/blog/2013/06/30/best-stash-addon-codegeist</id>
+   <content type="xhtml">&lt;p&gt;&lt;img style=&quot;float:left; padding-right: 1em;&quot; src=&quot;/gallery/codegeist2013.png&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Atlassian's annual Codegeist competition returned for the seventh time this year. After having won the prize for the &lt;a href=&quot;https://blogs.atlassian.com/2012/07/announcing-the-codegeist-2012-winners/&quot;&gt;best marketplace paid add-on in 2012&lt;/a&gt; with Behave for JIRA, we were excited to get involved again this year and came in on a saturday for a ShipIt day over beer and pizza.&lt;/p&gt;
+
+&lt;p&gt;A ShipIt day is an idea that we borrowed from Atlassian, it is a 24 hour hackathon during which developers have the opportunity to make tools and products which are useful but not business essential. We decided to develop something that we were originally going to keep to ourselves; to scratch our own itch, but thought what better time to band together and develop this add-on than on a ShipIt day. In our development process we use feature branches; creating a branch for each JIRA issue. Our itch was that sometimes we forgot to update the status on the issue, therefore causing confusion at times about what had been completed and what was integrated in the next release. We came up with the idea of creating something that will automatically transition these issues when we merge our feature branches.&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float:right; padding-left: 1em;&quot; src=&quot;/gallery/storyflow.png&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2013/06/30/best-stash-addon-codegeist/&quot;&gt;Storyflow for Stash&lt;/a&gt; automatically transitions JIRA issues when pull requests are opened, declined or merged. The add-on extends the Stash-JIRA integration further by automatically creating remote issue links to pull requests in JIRA issues when the issue is referenced in the pull request. Finally, issue watchers can be mapped to Stash users and Storyflow will automatically designate them as pull request reviewers.&lt;/p&gt;
+
+&lt;p&gt;After 24 hours of intense programming, Storyflow for Stash was ready to be unveiled and we are thrilled to announce that it won the prize for &quot;Best Stash add-on&quot;. Along with treating ourselves to a celebratory ice cream, we won some money, which we will be using to treat the team and attend the Atlassian summit in San Francisco in October.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/4J2a2_ewfJU&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+
+&lt;p&gt;Get your full roundup of the Codegiest 2013 results at the &lt;a href=&quot;http://blogs.atlassian.com/2013/06/codegeist-2013-winners/&quot;&gt;Atlassian website&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Digesting CukeUp! 2013</title>
-   <link href="http://hindsighttesting.comblog/2013/04/13/cukeup-2013-digest/"/>
+   <link href="http://hindsighttesting.com/blog/2013/04/13/cukeup-2013-digest/"/>
    <updated>2013-04-13T00:00:00+01:00</updated>
-   <id>http://recursive-design.comblog/2013/04/13/cukeup-2013-digest</id>
+   <id>http://recursive-design.com/blog/2013/04/13/cukeup-2013-digest</id>
    <content type="xhtml">&lt;p&gt;On the 4th of April the annual &lt;a href=&quot;http://skillsmatter.com/event/java-jee/cukeup-2013&quot;&gt;CukeUp! Conference&lt;/a&gt; for Cucumber and related tools. &lt;a href=&quot;http://www.guardian.co.uk/profile/gideon-goldberg&quot;&gt;Gideon Goldberg&lt;/a&gt; from the software
 testing team at The Guardian newspaper has &lt;a href=&quot;http://www.guardian.co.uk/info/developer-blog/2013/apr/10/cukeup-2013-conference-digest-gherkin-bdd&quot;&gt;written a digest&lt;/a&gt; of the
 conference written sin the Gherkin format of Cucumber. Gideon has managed to successfully distil my own talk from CukeUp! in to its simplest form.&lt;/p&gt;
 
-&lt;div&gt;
-  &lt;pre&gt;&lt;code class='gherkin'&gt;@alan_parkinson
-Scenario: Creating data with the Test Data Builder pattern
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;gherkin&quot;&gt;&lt;span class=&quot;nt&quot;&gt;@alan_parkinson&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;Scenario:&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt; Creating data with the Test Data Builder pattern&lt;/span&gt;
 
-    Given your tests require test data to be populated 
-      as a prerequisite
-    Then you should create this data using the Test Data 
-      Builder Pattern
-    And this data should be created through APIs
-    But not through SQL or UI manipulation&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;span class=&quot;k&quot;&gt;    Given &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;your tests require test data to be populated &lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;      as a prerequisite&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Then &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;you should create this data using the Test Data &lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;      Builder Pattern&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;And &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;this data should be created through APIs&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;But &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;not through SQL or UI manipulation&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;If this simple summary of my talk has caught your interest you can watch the real thing on the &lt;a href=&quot;http://skillsmatter.com/podcast/java-jee/creating-data-with-the-test-data-builder-pattern&quot;&gt;Skills Matter&lt;/a&gt; website&lt;/p&gt;
@@ -40,14 +63,14 @@ Scenario: Creating data with the Test Data Builder pattern
  
  <entry>
    <title>Concurrent test execution Part 2 - Moving on from batched based concurrency to Multithreading</title>
-   <link href="http://hindsighttesting.comblog/2013/03/30/running-tests-concurrently-part2/"/>
+   <link href="http://hindsighttesting.com/blog/2013/03/30/running-tests-concurrently-part2/"/>
    <updated>2013-03-30T00:00:00+00:00</updated>
-   <id>http://recursive-design.comblog/2013/03/30/running-tests-concurrently-part2</id>
+   <id>http://recursive-design.com/blog/2013/03/30/running-tests-concurrently-part2</id>
    <content type="xhtml">&lt;p&gt;&lt;img src=&quot;/gallery/batched-test-jobs-feedback-timegraph1.png&quot; style=&quot;float: left; padding: 1em;&quot;/&gt;&lt;/p&gt;
 
-&lt;p&gt;Whilst the divide and conquer strategy of grouping tests into batches for concurrent execution is a simple method of speeding up test suites, it’s not perfect. The better solution would be to execute tests concurrently using multiple threads and take advantage of the multiple core’s available in modern processors.&lt;/p&gt;
+&lt;p&gt;Whilst the divide and conquer strategy of grouping tests into batches for concurrent execution is a simple method of speeding up test suites, it's not perfect. The better solution would be to execute tests concurrently using multiple threads and take advantage of the multiple core's available in modern processors.&lt;/p&gt;
 
-&lt;p&gt;In &lt;a href=&quot;/blog/2012/10/30/running-tests-in-parallel/&quot;&gt;part 1&lt;/a&gt; of this series on concurrent test execution I went into detail on how to break test suites into batches and run each batch on separate machines. This is easy to achieve using spare hardware, Virtual Machines or Cloud computing resources. This happens to be the simplest technique for concurrent test execution as it doesn’t require any additional code, but being simple is not always best.&lt;/p&gt;
+&lt;p&gt;In &lt;a href=&quot;/blog/2012/10/30/running-tests-in-parallel/&quot;&gt;part 1&lt;/a&gt; of this series on concurrent test execution I went into detail on how to break test suites into batches and run each batch on separate machines. This is easy to achieve using spare hardware, Virtual Machines or Cloud computing resources. This happens to be the simplest technique for concurrent test execution as it doesn't require any additional code, but being simple is not always best.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/gallery/batched-test-jobs-feedback-timegraph2.png&quot; style=&quot;float: right; padding: 1em;&quot;/&gt;&lt;/p&gt;
 
@@ -65,9 +88,9 @@ Scenario: Creating data with the Test Data Builder pattern
 &lt;p&gt;To avoid additional coding, each batch group is executed in it's own CI job to leverage the scheduling and resource capabilities of CI systems.
 This can represent another delay to receiving test results as the jobs are bound to the available resources (Build Slaves/Agents) and scheduling
  rules of the CI server. In most CI systems you would have more than one project and many committers triggering jobs. This means your test batches
- might have to wait before they are scheduled to run, and they won’t all start at the same time.&lt;/p&gt;
+ might have to wait before they are scheduled to run, and they won't all start at the same time.&lt;/p&gt;
 
-&lt;p&gt;Tip: Don’t create more test batches than the number of available build slaves or agents. On CI systems with high resource contention (long wait
+&lt;p&gt;Tip: Don't create more test batches than the number of available build slaves or agents. On CI systems with high resource contention (long wait
 before jobs are scheduled to run) it's wise to have fewer test batches than build slaves to avoid likely contention.&lt;/p&gt;
 
 &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
@@ -85,7 +108,7 @@ before jobs are scheduled to run) it's wise to have fewer test batches than buil
 know it can dynamically detect your JUnit version and enable and disable features based on the JUnit version. In theory by including the JUnit 4.7+
 dependency in your Maven project the parallel test configuration options should be enabled, however if another dependency in your project includes an older
 version of JUnit it may use this version. Luckily it's rather simple to tell Surefire which JUnit version to support by specifying a dependency of the
-Surefire plugin. For JUnit 4.7+ you need to use “surefire-junit47”&lt;/p&gt;
+Surefire plugin. For JUnit 4.7+ you need to use &quot;surefire-junit47&quot;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;plugins&amp;gt;
     ...
@@ -126,7 +149,7 @@ Surefire plugin. For JUnit 4.7+ you need to use “surefire-junit47”&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;By default Surefire will create a test execution thread for each available core on the machine executing the tests. This default is satisfactory
-in many situations and can be overridden by the “perCoreThreadCount” and “threadCount” parameters.&lt;/p&gt;
+in many situations and can be overridden by the &quot;perCoreThreadCount&quot; and &quot;threadCount&quot; parameters.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;configuration&amp;gt;
     &amp;lt;parallel&amp;gt;methods&amp;lt;/parallel&amp;gt;
@@ -151,9 +174,9 @@ in many situations and can be overridden by the “perCoreThreadCount” and “thread
  
  <entry>
    <title>We are attending TestBash 2013</title>
-   <link href="http://hindsighttesting.comblog/2013/03/07/testbash/"/>
+   <link href="http://hindsighttesting.com/blog/2013/03/07/testbash/"/>
    <updated>2013-03-07T00:00:00+00:00</updated>
-   <id>http://recursive-design.comblog/2013/03/07/testbash</id>
+   <id>http://recursive-design.com/blog/2013/03/07/testbash</id>
    <content type="xhtml">&lt;p&gt;&lt;img style=&quot;float:left; padding-right: 1em; padding-bottom: 1em;&quot; src=&quot;/gallery/testbash.jpg&quot;/&gt;
 As active members of the testing community some of the Hindsight team will be attending &lt;a href=&quot;http://www.ministryoftesting.com/training-events/testbash-2-0/&quot;&gt;TestBash 2013&lt;/a&gt; on March 22nd in Brighton, UK. Anyone who wants to chat about Selenium, the testers role in Behaviour Driven Development or Cucumber-JVM should look out for our CEO Alan Parkinson. Just grab him, he won't mind.&lt;/p&gt;
 
@@ -163,9 +186,9 @@ As active members of the testing community some of the Hindsight team will be at
  
  <entry>
    <title>Cross browser testing user interface rendering</title>
-   <link href="http://hindsighttesting.comblog/2013/01/21/Cross-browser-testing-user-interface-rendering/"/>
+   <link href="http://hindsighttesting.com/blog/2013/01/21/Cross-browser-testing-user-interface-rendering/"/>
    <updated>2013-01-21T00:00:00+00:00</updated>
-   <id>http://recursive-design.comblog/2013/01/21/Cross-browser-testing-user-interface-rendering</id>
+   <id>http://recursive-design.com/blog/2013/01/21/Cross-browser-testing-user-interface-rendering</id>
    <content type="xhtml">&lt;p&gt;When it comes to front-end development with Behave for JIRA, I tend to favour Chrome as my web browser of choice but that does not allow me to escape from working with Internet Explorer. At Hindsight, we recognise Behave has to work across any number of browser and OS combinations, with the main challenges lying with Internet Explorer. Luckily IE6 is no longer a problem as Microsoft now considers it obsolete, according to &lt;a href=&quot;http://www.ie6countdown.com/&quot;&gt;IE6 countdown&lt;/a&gt;, its use is down to 0.9% in the UK and 0.4% in the US. That leaves us with Internet Explorer 7 and upwards to consider.&lt;/p&gt;
 
 &lt;h2&gt;Progressive Enhancement v. Graceful Degradation&lt;/h2&gt;
@@ -210,9 +233,9 @@ As active members of the testing community some of the Hindsight team will be at
  
  <entry>
    <title>Slides from jDays - Continuous Deployment Pipeline with Maven</title>
-   <link href="http://hindsighttesting.comblog/2012/12/10/jdays-goteborg-continuous-deployment-pipeline-with-maven/"/>
+   <link href="http://hindsighttesting.com/blog/2012/12/10/jdays-goteborg-continuous-deployment-pipeline-with-maven/"/>
    <updated>2012-12-10T00:00:00+00:00</updated>
-   <id>http://recursive-design.comblog/2012/12/10/jdays-goteborg-continuous-deployment-pipeline-with-maven</id>
+   <id>http://recursive-design.com/blog/2012/12/10/jdays-goteborg-continuous-deployment-pipeline-with-maven</id>
    <content type="xhtml">&lt;p&gt;Last week I attended the &lt;a href=&quot;http://www.jdays.se/&quot;&gt;jDays Conference&lt;/a&gt; for Java Professionals and talked about building a &quot;Continuous Deployment Pipeline in Maven&quot;&lt;/p&gt;
 
 &lt;iframe src=&quot;http://www.slideshare.net/slideshow/embed_code/15569541&quot; width=&quot;597&quot; height=&quot;486&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px&quot; allowfullscreen webkitallowfullscreen mozallowfullscreen&gt; &lt;/iframe&gt;
@@ -229,9 +252,9 @@ As active members of the testing community some of the Hindsight team will be at
  
  <entry>
    <title>Behave for JIRA Beta discount ending soon</title>
-   <link href="http://hindsighttesting.comblog/2012/11/19/PendingRelease/"/>
+   <link href="http://hindsighttesting.com/blog/2012/11/19/PendingRelease/"/>
    <updated>2012-11-19T00:00:00+00:00</updated>
-   <id>http://recursive-design.comblog/2012/11/19/PendingRelease</id>
+   <id>http://recursive-design.com/blog/2012/11/19/PendingRelease</id>
    <content type="xhtml">&lt;p&gt;&lt;img style=&quot;float:left; padding-right: 1em; padding-bottom: 1em;&quot; src=&quot;/assets/behave-logo.png&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;It's hard to believe its only been 18 weeks since we released the first Beta version of Behave for JIRA.
@@ -261,9 +284,9 @@ This period of time has featured some major milestones:&lt;/p&gt;
  
  <entry>
    <title>Running Automated Tests in Parallel - Part 1</title>
-   <link href="http://hindsighttesting.comblog/2012/10/30/running-tests-in-parallel/"/>
+   <link href="http://hindsighttesting.com/blog/2012/10/30/running-tests-in-parallel/"/>
    <updated>2012-10-30T00:00:00+00:00</updated>
-   <id>http://recursive-design.comblog/2012/10/30/running-tests-in-parallel</id>
+   <id>http://recursive-design.com/blog/2012/10/30/running-tests-in-parallel</id>
    <content type="xhtml">&lt;p&gt;Automated functional tests provide valuable feedback to developers by notifying them when they have completed or broken functionality. The value of these tests can be
 maximised by providing the test results in the shortest possible time. The reason being the problem is likely to be fresh in the developer's mind and quicker for them to fix.&lt;/p&gt;
 
@@ -379,9 +402,9 @@ following up with additional posts over the next 8 weeks to expand on this topic
  
  <entry>
    <title>One day tutorial on Cucumber-JVM at jDays Gothenburg</title>
-   <link href="http://hindsighttesting.comblog/2012/10/08/jDays-GOTEBORG-Cucumber-JVM-Tutorial/"/>
+   <link href="http://hindsighttesting.com/blog/2012/10/08/jDays-GOTEBORG-Cucumber-JVM-Tutorial/"/>
    <updated>2012-10-08T00:00:00+01:00</updated>
-   <id>http://recursive-design.comblog/2012/10/08/jDays-GOTEBORG-Cucumber-JVM-Tutorial</id>
+   <id>http://recursive-design.com/blog/2012/10/08/jDays-GOTEBORG-Cucumber-JVM-Tutorial</id>
    <content type="xhtml">&lt;p&gt;&lt;img style=&quot;float:left; padding-right: 1em; padding-bottom: 1em;&quot; src=&quot;/gallery/jDays_logo_RGB_speaker_emblem_pa1.png&quot;/&gt; Got the burning desire to learn Cucumber-JVM but don't know where to start? We are pleased to announce that we will be running a one day tutorial on &quot;BDD with Cucumber-JVM&quot; at jDays  Gothenburg on the 5th of December. The tutorial is free for all the attendees of jDays, a three day conference for Java professionals held at the Swedish Exhibition &amp;amp; Congress Centre, Gothenburg
 Sweden. Full details are available at the &lt;a href=&quot;http://www.jdays.se/course-information/&quot;&gt;jDays website&lt;/a&gt;&lt;/p&gt;
 
@@ -402,9 +425,9 @@ Sweden. Full details are available at the &lt;a href=&quot;http://www.jdays.se/c
  
  <entry>
    <title>Behave for JIRA wins "Best Marketplace paid add-on" in Codegeist 2012</title>
-   <link href="http://hindsighttesting.comblog/2012/07/30/acceptance-testing-wins-in-codegeist/"/>
+   <link href="http://hindsighttesting.com/blog/2012/07/30/acceptance-testing-wins-in-codegeist/"/>
    <updated>2012-07-30T00:00:00+01:00</updated>
-   <id>http://recursive-design.comblog/2012/07/30/acceptance-testing-wins-in-codegeist</id>
+   <id>http://recursive-design.com/blog/2012/07/30/acceptance-testing-wins-in-codegeist</id>
    <content type="xhtml">&lt;p&gt;&lt;img style=&quot;float:right; padding-left: 1em;&quot; src=&quot;/gallery/codegeist2012_logo.png&quot;/&gt; In a record field of 94 high quality entries Behave for JIRA fought its way to win &quot;Best Marketplace-enabled Plugin&quot; in Atlassian's Codegiest 2012.
 Codegiest is annual competition held by Atlassian to find the best product extensions for JIRA, Confluence, GreenHopper, Bamboo, Stash, Bitbucket and the other Atlassian tools.&lt;/p&gt;
 
@@ -416,9 +439,9 @@ Codegiest is annual competition held by Atlassian to find the best product exten
  
  <entry>
    <title>A Slice of Pi with your Information Radiator</title>
-   <link href="http://hindsighttesting.comblog/2012/06/01/raspberry-pi-jira-information-raditor/"/>
+   <link href="http://hindsighttesting.com/blog/2012/06/01/raspberry-pi-jira-information-raditor/"/>
    <updated>2012-06-01T00:00:00+01:00</updated>
-   <id>http://recursive-design.comblog/2012/06/01/raspberry-pi-jira-information-raditor</id>
+   <id>http://recursive-design.com/blog/2012/06/01/raspberry-pi-jira-information-raditor</id>
    <content type="xhtml">&lt;p&gt;Most of you would of heard of the Raspberry Pi - a low powered credit card sized computer released in the last few months. After a wait I managed to get my hands on one of these nifty devices and have put one of my ideas into action: a power efficient information radiator.&lt;/p&gt;
 
 &lt;p&gt;Information radiators are very useful visual tools that allow anyone at a glance to see the state of the project and receive feedback from important systems. Typically an old or spare PC is used to run a web browser rendering information to a large screen or TV displayed in the team's work area. JIRA has a handy Wallboard plugin that can turn any dashboard into a format to appear on a Information Radiator.&lt;/p&gt;
@@ -490,9 +513,9 @@ Codegiest is annual competition held by Atlassian to find the best product exten
  
  <entry>
    <title>Security testing with Selenium and the Zed Attack Proxy (ZAP)</title>
-   <link href="http://hindsighttesting.comblog/2012/05/18/automated-security-testing-selenium-zap/"/>
+   <link href="http://hindsighttesting.com/blog/2012/05/18/automated-security-testing-selenium-zap/"/>
    <updated>2012-05-18T00:00:00+01:00</updated>
-   <id>http://recursive-design.comblog/2012/05/18/automated-security-testing-selenium-zap</id>
+   <id>http://recursive-design.com/blog/2012/05/18/automated-security-testing-selenium-zap</id>
    <content type="xhtml">&lt;p&gt;A few weeks ago I had the pleasure of speaking at the 2012 Selenium Conf in London. My presentation was on &quot;Automated Security Testing&quot; using Selenium and the Zed Attack Proxy. All the SeConf presentations have been recorded and I thought I would share my talk with you now it has been published.&lt;/p&gt;
 
 &lt;object style=&quot;height: 460px; width: 760px&quot;&gt;&lt;param name=&quot;wmode&quot; value=&quot;transparent&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/aVFZFi_6B9g?version=3&amp;feature=player_detailpage&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;&gt;&lt;embed src=&quot;http://www.youtube.com/v/aVFZFi_6B9g?version=3&amp;feature=player_detailpage&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; allowScriptAccess=&quot;always&quot; width=&quot;760&quot; height=&quot;460&quot;&gt;&lt;/object&gt;
