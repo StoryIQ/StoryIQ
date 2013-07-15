@@ -4,13 +4,38 @@
  <title>Blogging with Hindsight</title>
  <link href="http://hindsighttesting.com/blog/feed.xml" rel="self"/>
  <link href="http://hindsighttesting.com/"/>
- <updated>2013-07-01T18:28:35+01:00</updated>
+ <updated>2013-07-15T17:38:52+01:00</updated>
  <id>http://hindsighttesting.com/blog</id>
  <author>
    <name>Hindsight Software Ltd</name>
    <email>mail@hindsighttesting.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Continuous Delivery and Bamboo 5</title>
+   <link href="http://hindsighttesting.com/blog/2013/07/15/continuous-delivery-bamboo-5/"/>
+   <updated>2013-07-15T00:00:00+01:00</updated>
+   <id>http://recursive-design.com/blog/2013/07/15/continuous-delivery-bamboo-5</id>
+   <content type="xhtml">&lt;p&gt;Delivering software quickly and frequently can be a business advantage. Bamboo is known as a continuous integration tool but now has some very useful features to help with continuous delivery and can help deliver this business advantage.&lt;/p&gt;
+
+&lt;p&gt;The idea of lean start ups is to rapidly make incremental product changes and evaluate the customer response. To do this for our product Behave for JIRA we used the concept of continuous delivery, releasing a new version every 2-3 weeks featuring new functionality based on customer feedback. This helped to establish a feature set that our customers wanted, allowing us within 6 months to go from a prototype minimum viable product to a full product that customers were paying for.&lt;/p&gt;
+
+&lt;p&gt;So what is the problem that continuous integration solves? Well, how many times have you said as a developer &quot;it worked on my machine&quot; when you've received a bug report? Continuous integration solves this problem. It takes every single commit, builds it, packages it, and runs automated test suites (unit tests, integration tests, and selenium tests).&lt;/p&gt;
+
+&lt;p&gt;Continuous Delivery takes continuous integration several steps further. The concept is all about patterns and building a pipeline from requirements to actually delivering working software to customer.&lt;/p&gt;
+
+&lt;p&gt;We think creating software is just like running a marathon; the hardest part is the last few miles - getting the software into the customers hands. This is the last stage in the Continuous Delivery pipeline.&lt;/p&gt;
+
+&lt;p&gt;Deployment projects in Bamboo 5 can help solve this. In the instance of continuous integration, you have green for good, red for bad builds etc. In continuous delivery we need to think about the release process. Taking each individual build, mapping it to a version number and releasing it. How you map it is up to you, but CI is not designed for assigning release numbers. Bamboo 5 focuses on helping to solve this final mile of delivering the software. It introduces the concept of &quot;Deployment Projects&quot;. The sole purpose of these projects are to deploy a &quot;Release&quot; of your software to a particular environment.&lt;/p&gt;
+
+&lt;p&gt;&lt;img width=&quot;760px&quot; src=&quot;/gallery/deploymentProjectEnviroments.png&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&quot;Environments&quot; represent a logically named location where the software can be deployed. This would be an instance of a application container, platform, server or artifact repository. Common examples would be QA server, Staging and Production. Each environment is also responsible for understanding how to deploy your release artifacts to the required system or location. This deployment process is implemented using the familiar Bamboo tasks.&lt;/p&gt;
+
+&lt;p&gt;Bamboo 5 has some awesome features for helping you solve the last mile problem of getting your software into your customers hands in a way that is quick, reliable and consistent. Bamboo 5 has been released today and you can &lt;a href=&quot;http://www.atlassian.com/software/bamboo/download&quot;&gt;download&lt;/a&gt; a copy from the Atlassian website.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Storyflow for Stash wins "Best Stash add-on" at Atlassian Codegeist 2013</title>
