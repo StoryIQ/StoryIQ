@@ -4,13 +4,188 @@
  <title>Blogging with Hindsight</title>
  <link href="http://hindsighttesting.com/blog/feed.xml" rel="self"/>
  <link href="http://hindsighttesting.com/"/>
- <updated>2013-07-15T17:38:52+01:00</updated>
+ <updated>2013-08-14T14:09:17+01:00</updated>
  <id>http://hindsighttesting.com/blog</id>
  <author>
    <name>Hindsight Software Ltd</name>
    <email>mail@hindsighttesting.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Cross browser testing JavaScript</title>
+   <link href="http://hindsighttesting.com/blog/2013/08/14/Cross-browser-testing-JavaScript/"/>
+   <updated>2013-08-14T00:00:00+01:00</updated>
+   <id>http://recursive-design.com/blog/2013/08/14/Cross-browser-testing-JavaScript</id>
+   <content type="xhtml">&lt;p&gt;One mistake many people make is running their selenium test suites with every browser combination... you don't need to! Rendering problems are probably the biggest cross browser compatibility issue, and you can't actually test for these with Functional Tests. So by running Selenium tests across many browsers you are really testing JavaScript and DOM compatibility.&lt;/p&gt;
+
+&lt;p&gt;Running our Selenium tests across many browsers was our JavaScript compatibility strategy, but it proved inefficient as we ended up with bugs in Internet Explorer; how embarrassing!&lt;/p&gt;
+
+&lt;p&gt;We were sure we had a good Selenium test suite so how did miss the bugs? We decided to investigate. We started to look at code coverage of JavaScript in our test suite and found that only 72% of JavaScript was executed. That leaves 18% untested for compatibility and our IE bugs were located in this area. We spent some time coming up with possible solutions to our poor compatibly testing and found a simple solution.&lt;/p&gt;
+
+&lt;p&gt;We've been using TDD (Test Driven Development) with JavaScript but our use wasn't consistent. We decided the front end code should have the same techniques and rigour applied as the back end code, so we wanted to improve on it.&lt;/p&gt;
+
+&lt;p&gt;By reusing and running these TDD unit tests across all the different browser combinations required for compatibility, you can guarantee good compatibility of JavaScript and DOM. This is due to the fact many complex error situations can be simulated in unit tests compared to functional tests. If developers, when developing JavaScript are forcing themselves to do TDD they're creating an artifacts. As testers, we're reusing these artifacts to help us and save time and effort.&lt;/p&gt;
+
+&lt;p&gt;Another important reason to use JavaScript unit tests is that Selenium tests are extremely slow. If we want to test across multiple browsers it can take an age as the tests are repeatability executed. Our average Selenium test time is 8 seconds per Selenium Test, and the whole suite takes 5 minutes, which could be considered a good time. But, when you compare this performance to JavaScript unit tests there is a bit of a reality check. The our average JavaScript unit tests takes 0.1 seconds and the whole suite 11 seconds.&lt;/p&gt;
+
+&lt;h2&gt;How do we run our JavaScript tests in multiple browsers?&lt;/h2&gt;
+
+&lt;p&gt;JsTestDriver has been used by many people for executing their tests in browsers but it has a few short comings and wasn't reliable when setup for Continuous Integration. Lucky for us we discovered Karma (formally known as Testacular) an awesome test runner for JavaScript that use real browsers to run the tests.&lt;/p&gt;
+
+&lt;p&gt;Feature Summary:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Can launch real browsers as required&lt;/li&gt;
+&lt;li&gt;Testing framework agnostic - we use Jasmine but you can use QUnit, Mocha or another framework&lt;/li&gt;
+&lt;li&gt;Good support for Continuous Integration&lt;/li&gt;
+&lt;li&gt;Supports code coverage with Instanbul&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Out of the box Karma provides launchers for Chrome, Chrome Canary, Safari, Firefox, Opera, PhantomJS, and IE. The problem with theses launchers is you are required to install each browser or set-up VM's with the browsers available. This is a particular problem for management of CI and teat infrastructure. Our solution to the original problem for our Selenium Tests was to set-up a Selenium Grid.&lt;/p&gt;
+
+&lt;p&gt;As management of web browser installations was going to become a issue again for our CI cluster, we created &quot;karma-webdriver-launcher&quot;. This allows Karma to access our to for using Remote WebDriver instances for providing web browsers to Karma. This allows us to leverage our existing Selenium Grid test infrastructure with our JavaScript testing strategy.&lt;/p&gt;
+
+&lt;h2&gt;Using Karma&lt;/h2&gt;
+
+&lt;p&gt;Karma is written in Node.JS so you will need both Node.JS and Node Package Manager (NPM) to be installed first.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;npm install -g karma&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Install the launcher plugin for Remote WebDriver instances&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;npm install -g karma-webdriver-launcher&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;In the project you would like to use Karma you will need to create a karma config file. You can generate a basic Karma config file using a simple command&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;karma init&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The generated config file won't have configured browsers from the WebDriver Launcher, so we have edit the config file. The 'browsers' array controls which browsers the tests should be executed within, in this case Internet Explorer.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;module.exports = function(karma) {
+
+  karma.set({
+
+    // base path, that will be used to resolve files and exclude
+    basePath: '',
+
+
+    // frameworks to use
+    frameworks: ['jasmine'],
+
+
+    // list of files / patterns to load in the browser
+    files: [
+      'Demo.js',
+      'DemoSpec.js'
+    ],
+
+    // test results reporter to use
+    reporters: ['progress', 'junit'],
+
+    // Start these browsers
+    browsers: ['IE'],
+
+    ...
+
+  });
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Add a array 'customLaunchers' to the config file, this is where we can define new Wbe Browsers Karma doesn't know about. We need to define all the browsers we want to make avaialble from our Selenium Grid within 'customLaunchers'. The first part is to define the name for the new browser so we can reference them within the 'browsers' array and then you need to specify attributes to describe the browser to launch. A full list of attributes is in the table below.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt; Attribute   &lt;/th&gt;
+&lt;th style=&quot;text-align:center;&quot;&gt; Required &lt;/th&gt;
+&lt;th&gt; Notes                                          &lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt; base        &lt;/td&gt;
+&lt;td style=&quot;text-align:center;&quot;&gt; true     &lt;/td&gt;
+&lt;td&gt; The plugin to launch this browser; WebDriver   &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; browserName &lt;/td&gt;
+&lt;td style=&quot;text-align:center;&quot;&gt; true     &lt;/td&gt;
+&lt;td&gt; The name of the browser you require, should be one of {android|chrome|firefox|htmlunit|internet explorer|iPhone|iPad|opera|safari}  &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; config      &lt;/td&gt;
+&lt;td style=&quot;text-align:center;&quot;&gt; false    &lt;/td&gt;
+&lt;td&gt; The location of the remote WebDriver or Selenium Grid 2 instance. Default value of 127.0.0.1 on port 4444 &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; platform    &lt;/td&gt;
+&lt;td style=&quot;text-align:center;&quot;&gt; false    &lt;/td&gt;
+&lt;td&gt;    Operating System &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; version     &lt;/td&gt;
+&lt;td style=&quot;text-align:center;&quot;&gt; false    &lt;/td&gt;
+&lt;td&gt;    Browser version &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;p&gt;Example configuration for an Internet Explorer 7 instance on Windows XP.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;karma.set({
+
+    customLaunchers: {
+      'IE7-XP': {
+          base: 'WebDriver',
+          browserName: 'internet explorer',
+          platform: 'Windows XP',
+          version: '7'
+      }
+    },
+
+    ...
+
+    browsers: ['IE7-XP'],
+
+    ...
+
+  });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;By default the WebDriver launcher looks the remote WebDriver or Selenium Grid 2 instance on port 4444 on the localhost. This might be suitable and when defining many browsers you don't want to have to repeat the configuration. As the Karma config is JavaScript based, just create a common object for the configuration and pass it to the 'config' attribute of each custom launcher.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var grid = {
+    hostname: '127.0.0.1',
+    port: 4444
+  };
+
+karma.set({
+
+    customLaunchers: {
+      'IE7-XP': {
+          base: 'WebDriver',
+          config: grid,
+          browserName: 'internet explorer',
+          platform: 'Windows XP',
+          version: '7'
+      }
+    },
+
+    ...
+
+    browsers: ['IE7-XP'],
+
+    ...
+
+  });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you were to add the above example to a Karma config file and have a working Selenium Grid 2 setup you should be ready to start cross browsers testing your JavaScript. A full example project is available on &lt;a href=&quot;https://github.com/hindsightsoftware/karma-webdriver-example&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Continuous Delivery and Bamboo 5</title>

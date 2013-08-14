@@ -216,3 +216,15 @@ button.btn::-moz-focus-inner,input[type=submit].btn::-moz-focus-inner{padding:0;
     width: 280px;
     padding-left: 20px;
 }
+
+.post-content table, .post-content tr, .post-content td {
+  border: 1px solid #ddd;
+  padding: 1em;
+}
+
+code {
+    font-weight: bold;
+    padding-left: 1.5em;
+}
+
+
